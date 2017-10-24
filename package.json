@@ -13,6 +13,7 @@
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
     "webpack": "^3.8.1"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
@@ -22,8 +23,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch"
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -32,9 +32,6 @@
   "engines": {
     "node": "4.1.1",
     "npm": "2.1.x"
-  },
-  "scripts": {
-    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",

@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
-      redirect_to reviews_url
+      # redirect_to reviews_url
     else
       flash.now[:errors] = ["Incorrect credentials"]
     end
