@@ -7,7 +7,8 @@ class Api::UsersController < ApplicationController
       debugger
       render json: ["Signed up!"]
     else
-      render json: ["Unable to sign up"]
+      debugger
+      render json: ["Unable to sign up"], status: 422
     end
   end
 

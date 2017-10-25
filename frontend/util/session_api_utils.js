@@ -3,7 +3,7 @@ export const login = (user) => {
     {
       url: "api/session",
       method: "post",
-      data: { user }
+      data: user
     }
   );
 };
@@ -22,7 +22,7 @@ export const signup = (user) => {
     {
       url: "api/users",
       method: "post",
-      data: { user }
+      data: user
     }
   );
 };
