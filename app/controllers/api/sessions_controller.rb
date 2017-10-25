@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
     if @user
       debugger
       login(@user)
-      render json: ["Logged In"]
+      render 'users/show'
     else
       debugger
       render json: ["Incorrect credentials"], status: 422

@@ -5,15 +5,14 @@ class Api::UsersController < ApplicationController
     if @user.save
       login(@user)
       debugger
-      render json: ["Signed up!"]
+      render '/users/show'
     else
-      debugger
       render json: ["Unable to sign up"], status: 422
     end
   end
 
   def show
-
+    render '/users/show'
   end
 
   private

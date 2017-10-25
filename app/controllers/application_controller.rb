@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
   def login(user)
-    debugger
     session[:session_token] = user.reset_session_token!
     @current_user = user
   end
