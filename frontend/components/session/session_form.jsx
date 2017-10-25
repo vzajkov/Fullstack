@@ -9,10 +9,12 @@ class SessionForm extends React.Component {
       password: 'Password'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    debugger
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
+      debugger
       this.props.history.push('/');
     }
   }
