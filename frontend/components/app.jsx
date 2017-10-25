@@ -4,12 +4,21 @@ import { Route, Link } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <h1>Kelp</h1>
+
+    <span className="header">
+      <h1 id="Kelp">Kelp</h1>
+    </span>
+
+    <span className="footer">
+      <h2 id="footerInfo">Welcome to my footer!</h2>
+    </span>
     <Link to="/login">Login</Link>
     <br/>
     <Link to="/signup">Signup</Link>
+
     <Route path="/login" component={SessionFormContainer} />
     <Route path="/signup" component={SessionFormContainer} />
+
   </div>
 );
 

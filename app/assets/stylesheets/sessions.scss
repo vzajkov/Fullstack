@@ -1,3 +1,46 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-form-container {
+display: flex;
+}
+
+.login-form {
+font-weight: bolder;
+padding: 0;
+margin: 0 auto;
+}
+
+.submit-cred {
+width: 250px;
+height: 30px;
+background-color: red;
+color: white;
+}
+
+.welcome {
+  font-size: 30px;
+  font-weight: bolder;
+  color: red;
+}
+
+.newLink {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.header {
+  background-color: red;
+  padding: 25px;
+  display: flex;
+}
+
+.footer {
+  bottom: 5px;
+  background-color: gray
+}
+
+#Kelp {
+  color: white;
+}
