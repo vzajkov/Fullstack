@@ -5,8 +5,8 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: ''
+      username: 'Username',
+      password: 'Password'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -31,9 +31,17 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">Sign Up</Link>;
+      return(
+       <div>
+         <span className="newToKelpLink">New to Kelp? </span>
+         <Link to="/signup">Sign Up</Link>;
+       </div>);
     } else {
-      return <Link to="/login">Log In</Link>;
+      return(
+        <div>
+          <span className="haveKelpLink">Have an account? </span>
+          <Link to="/login">Log In</Link>
+       </div>);
     }
   }
 
@@ -53,32 +61,28 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <p className="welcome">Welcome to Kelp!</p>
+          <span className="welcome">Welcome to Kelp!</span>
           <br/>
-          <p className="newLink">New to Kelp? {this.navLink()}</p>
           {this.renderErrors()}
+          {this.navLink()}
           <div className="login-form">
-            <br/>
-            <label>Username:
-              <input type="text"
+            <label className="usernameContainer">
+              <input className="username" type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"
-              />
+                className="login-input"/>
             </label>
             <br/>
-            <label>Password:
-              <input type="password"
+            <label className="passwordContainer">
+              <input className="password" type="text"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
-              />
+                className="login-input"/>
             </label>
             <br/>
             <input className="submit-cred" type="submit" value="Submit" />
           </div>
         </form>
-
         <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
       </div>
     );

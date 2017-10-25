@@ -3,30 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-form-container {
+margin-top: 25px;
 display: flex;
 justify-content: space-around;
 }
 
 .login-form {
 font-weight: bolder;
-padding: 0;
 margin: 0 auto;
 }
 
+.login-form-box {
+  justify-content: space-around;
+}
 .submit-cred {
+  margin-top: 15px;
 width: 250px;
 height: 30px;
 background-color: red;
 color: white;
+font-weight: bolder;
 }
 
 .welcome {
+  margin: 0 auto;
   font-size: 30px;
   font-weight: bolder;
   color: red;
 }
 
-.newLink {
+.newToKelpLink {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.haveKelpLink {
   font-size: 20px;
   font-weight: bolder;
 }
@@ -46,13 +57,34 @@ color: white;
   bottom: 15px;
 }
 
-.Links {
+.footerLinks {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
 }
 
-#Kelp {
+.headerLinks {
+  list-style-type: none;
+  display: flex;
+
+}
+
+.headerLinks li {
+  margin-left: 5px;
+  padding: 5px;
+  border: 3px solid white;
+  border-radius: 4px;
+}
+
+.Kelp {
   color: white;
-  margin: 0 auto;
+  margin: auto;
+}
+
+.username {
+  margin-bottom: 15px;
+}
+
+.password {
+  margin-bottom: 15px;
 }
