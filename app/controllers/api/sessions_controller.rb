@@ -5,15 +5,15 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
-      # redirect_to reviews_url
+      render json: ["Logged In"]
     else
-      flash.now[:errors] = ["Incorrect credentials"]
+      render json: ["Incorrect credentials"], status: 422
     end
   end
 
   def destroy
     logout
-    redirect_to new_session_url
+    # redirect_to new_session_url
   end
 
 end

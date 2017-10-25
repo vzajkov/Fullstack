@@ -2,14 +2,12 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
-
     if @user.save
-      debugger
       login(@user)
-      # redirect_to reviews_url
+      debugger
+      render json: ["Signed up!"]
     else
-      flash.now[:errors] = @user.errors.full_messages
+      render json: ["Unable to sign up"]
     end
   end
 

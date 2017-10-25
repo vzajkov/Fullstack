@@ -8,12 +8,11 @@ export const login = (user) => {
   );
 };
 
-export const logout = (user) => {
+export const logout = () => {
   return $.ajax(
     {
-      url: "api/session",
+      url: `api/session/`,
       method: "delete",
-      data: { user }
     }
   );
 };

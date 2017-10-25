@@ -23,7 +23,8 @@
     "test": "test"
   },
   "scripts": {
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "webpack": "webpack --watch"
   },
   "repository": {
     "type": "git",
