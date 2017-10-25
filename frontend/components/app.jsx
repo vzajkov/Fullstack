@@ -5,13 +5,22 @@ import { Route, Link } from 'react-router-dom';
 const App = () => (
   <div>
 
-    <span className="header">
-      <h1 id="Kelp">Kelp</h1>
-    </span>
+    <div className="header">
+      <span>
+        <span id="Kelp">Kelp
+          <i className="fa fa-yelp" aria-hidden="true"></i>
+        </span>
+      </span>
+    </div>
 
-    <span className="footer">
-      <h2 id="footerInfo">Welcome to my footer!</h2>
-    </span>
+    <div className="footer">
+      <div className="Links">
+        <Link to="#">Github</Link>
+        <Link to="#">MySpace</Link>
+        <Link to="#">LinkedIn</Link>
+      </div>
+    </div>
+
     <Link to="/login">Login</Link>
     <br/>
     <Link to="/signup">Signup</Link>

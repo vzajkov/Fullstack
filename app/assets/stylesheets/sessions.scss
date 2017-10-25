@@ -4,6 +4,7 @@
 
 .login-form-container {
 display: flex;
+justify-content: space-around;
 }
 
 .login-form {
@@ -37,10 +38,21 @@ color: white;
 }
 
 .footer {
-  bottom: 5px;
-  background-color: gray
+  border-top: 1px solid gray;
+  background-color: #D3D3D3;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+}
+
+.Links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
 #Kelp {
   color: white;
+  margin: 0 auto;
 }

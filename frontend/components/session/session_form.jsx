@@ -78,6 +78,8 @@ class SessionForm extends React.Component {
             <input className="submit-cred" type="submit" value="Submit" />
           </div>
         </form>
+
+        <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
       </div>
     );
   }
