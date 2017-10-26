@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create!([{ username: 'Valery', password: 'starwars'}])
+
+businesses = Business.create!([{ name: 'krustykrab', rating: 4.2 }])
