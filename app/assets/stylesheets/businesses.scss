@@ -1,3 +1,22 @@
 // Place all the styles related to the Businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.business-index-list li {
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.business-index-listitem {
+  list-style-type: none;
+}
+
+.business-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  width: 150px;
+  height: 70px;
+  background-color: #D3D3D3;
+}
