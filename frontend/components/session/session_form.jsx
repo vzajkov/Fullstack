@@ -33,19 +33,22 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return(
        <div>
-         <span className="newToKelpLink">New to Kelp? </span>
-         <Link to="/signup">Sign Up</Link>;
+         <span className="newToKelpLink">New to Kelp?
+         <Link to="/signup"> Sign Up</Link>
+         </span>
        </div>);
     } else {
       return(
         <div>
-          <span className="haveKelpLink">Have an account? </span>
-          <Link to="/login">Log In</Link>
+          <span className="haveKelpLink">Have an account?
+          <Link to="/login"> Log In</Link>
+          </span>
        </div>);
     }
   }
 
   renderErrors() {
+    debugger
     return(
       <ul>
         {this.props.errors.map((error, i) => (
@@ -67,14 +70,14 @@ class SessionForm extends React.Component {
           {this.navLink()}
           <div className="login-form">
             <label className="usernameContainer">
-              <input className="username" type="text"
+              <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"/>
             </label>
             <br/>
             <label className="passwordContainer">
-              <input className="password" type="text"
+              <input type="text"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"/>
@@ -83,7 +86,7 @@ class SessionForm extends React.Component {
             <input className="submit-cred" type="submit" value="Submit" />
           </div>
         </form>
-        <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+        <img id="welcome-img" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
       </div>
     );
   }

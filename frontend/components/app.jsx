@@ -13,6 +13,16 @@ const App = () => (
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <Route path="/businesses" component={BusinessIndexContainer} />
       </Switch>
+
+      <div className="footer">
+        <div className="footerLinks">
+          <Link to="#">Github</Link>
+          <Link to="#">MySpace</Link>
+          <Link to="#">LinkedIn</Link>
+        </div>
+      </div>
+
+
   </div>);
 
 

@@ -3,30 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-form-container {
-margin-top: 25px;
+margin-top: 200px;
 display: flex;
 justify-content: space-around;
+
 }
 
 .login-form {
 font-weight: bolder;
-margin: 0 auto;
+margin-bottom: 0;
+
 }
 
 .login-form-box {
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
+
 }
+
+#Kelp-title {
+  font-size: 35px;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bolder;
+  text-shadow: -2px -2px black;
+}
+
 .submit-cred {
-  margin-top: 15px;
+margin-top: 15px;
 width: 250px;
 height: 30px;
 background-color: red;
 color: white;
+border-radius: 5px;
 font-weight: bolder;
+text-align: center;
 }
 
 .welcome {
-  margin: 0 auto;
+  margin: 10px;
   font-size: 30px;
   font-weight: bolder;
   color: red;
@@ -35,16 +51,22 @@ font-weight: bolder;
 .newToKelpLink {
   font-size: 20px;
   font-weight: bolder;
+  position: relative;
+  left: 35px;
+  margin-bottom: 10px;
 }
 
 .haveKelpLink {
   font-size: 20px;
   font-weight: bolder;
+  position: relative;
+  left: 35px;
+  margin-bottom: 10px;
 }
 
 .header {
   background-color: red;
-  padding: 25px;
+  padding: 45px;
   display: flex;
 }
 
@@ -53,8 +75,8 @@ font-weight: bolder;
   background-color: #D3D3D3;
   height: 50px;
   width: 100%;
-  position: absolute;
-  bottom: 15px;
+  position: fixed;
+  bottom: 0px;
 }
 
 .footerLinks {
@@ -66,12 +88,14 @@ font-weight: bolder;
 .headerLinks {
   list-style-type: none;
   display: flex;
-
+  font-family: sans-serif;
+  color: white;
+  font-weight: bolder;
 }
 
 .headerLinks li {
   margin-left: 5px;
-  padding: 5px;
+  padding: 10px;
   border: 3px solid white;
   border-radius: 4px;
 }
@@ -81,10 +105,11 @@ font-weight: bolder;
   margin: auto;
 }
 
-.username {
+.login-input {
   margin-bottom: 15px;
-}
-
-.password {
-  margin-bottom: 15px;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  height: 30px;
+  position: relative;
+  left: 30px;
 }

@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .business-index-list li {
-  border-bottom: 1px solid #D3D3D3;
+
 }
 
 .business-index-listitem {
@@ -13,10 +13,19 @@
 .business-item-wrapper {
   display: flex;
   justify-content: space-between;
+  width: 700px;
+  height: 80px;
+  padding: 10px;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.business-name {
+  margin-top: auto;
 }
 
 .address {
-  width: 150px;
+  width: 270px;
   height: 70px;
   background-color: #D3D3D3;
+  margin-top: 0;
 }
