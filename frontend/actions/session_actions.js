@@ -7,7 +7,7 @@ export const login = (user) => (dispatch) => {
 };
 
 export const logout = (user) => (dispatch) => {
-    SessionAPIUtil.logout(user).then(user => dispatch(receiveCurrentUser(user)));
+   SessionAPIUtil.logout(user).then(user => dispatch(receiveCurrentUser(user)));
 };
 
 export const signup = (user) => (dispatch) => {

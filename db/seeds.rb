@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create!([{ username: 'Valery', password: 'starwars'}])
+users = User.create!([{ username: 'Valery', password: 'starwars'}, {username: 'mrkrabs', password: 'moneymoneymoney'} ])
 
-businesses = Business.create!([{ name: 'krustykrab', rating: 4.2 }])
+businesses = Business.create!([{ name: 'krustykrab', rating: 4.2 }, { name: 'chumbucket', rating: 1.3}])
