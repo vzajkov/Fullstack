@@ -41,6 +41,23 @@ width: 750px;
   margin-top: auto;
 }
 
+.navbar {
+  background: red;
+  padding-top: 10px;
+}
+
+#search-bar {
+  background-color: white;
+  display: inline;
+  width: 200px;
+  height: 25px;
+  font-family: sans-serif;
+  font-size: 25px;
+  border-radius: 3px;
+  position: relative;
+  margin-left: 100px;
+}
+
 .img-name {
   display: flex;
 }

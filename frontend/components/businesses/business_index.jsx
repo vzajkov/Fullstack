@@ -14,9 +14,12 @@ class BusinessIndex extends React.Component {
   return (
 
     <div>
-      <span>
+      <nav className="navbar">
         <button id="log-out-button" onClick={this.props.logout} >Log Out</button>
-      </span>
+        <form id="search-bar">
+          <input type="text" placeholder="Search for businesses"/>
+        </form>
+    </nav>
 
       <ul className="business-index-list">
       {this.props.businesses.map(business => (
