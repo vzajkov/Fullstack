@@ -32,7 +32,14 @@ margin-bottom: 0;
   font-family: sans-serif;
   color: black;
   font-weight: bolder;
-  text-shadow: -7px -7px white, 0px -7px white, 0px 7px white;
+  text-shadow: -7px -7px 5px white,
+  0px -7px 5px white,
+  7px -7px 5px white,
+  -2px 7px 5px white,
+  7px 0px 5px white,
+  -7px 3px 5px white,
+  -2px -7px 5px white
+  ;
   position: relative;
   margin-left: 800px;
 }

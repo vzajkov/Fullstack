@@ -32,13 +32,18 @@ width: 750px;
 .list-img-wrapper {
   width: 80px;
   height: 80px;
+  border-radius: 5px;
   background-color: gray;
+  margin-right: 5px;
 }
 
 .business-name {
   margin-top: auto;
 }
 
+.img-name {
+  display: flex;
+}
 .address {
   width: 270px;
   height: 70px;
