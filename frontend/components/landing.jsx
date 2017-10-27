@@ -5,24 +5,13 @@ import { Route, Link, Switch } from 'react-router-dom';
 const Landing = () => (
   <div className="landing-background">
 
-    <div className="header">
-        <span className="Kelp">
+    <ul className='headerLinks'>
+      <li><Link to="/login">Login</Link> </li>
+      <li><Link to="/signup">Signup</Link> </li>
+      <li><Link to="/login">Demo Login</Link> </li>
+    </ul>
 
-          <span id="Kelp-title">Kelp  </span>
-
-       </span>
-        <ul className='headerLinks'>
-          <li><Link to="/login">Login</Link> </li>
-          <li><Link to="/signup">Signup</Link> </li>
-          <li><Link to="/login">Demo Login</Link> </li>
-        </ul>
-
-
-    </div>
-
-    <div id="img-wrapper">
-      <img id="landing_img" src="https://goo.gl/JzKBj1"></img>
-    </div>
+    <span id="Kelp-title">Kelp  </span>
 
 
 

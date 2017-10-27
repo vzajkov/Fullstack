@@ -6,22 +6,26 @@ class BusinessShow extends React.Component {
   }
 
   render() {
+    debugger
+    const showprops = this.props.businesses[this.props.match.params.id];
     return (
       <div>
-        <h1>{this.props.business.name}</h1>
+        <h1>{showprops.name}</h1>
         <br/>
-        <p>{this.props.business.rating}</p>
+        <p>{showprops.rating}</p>
         <br/>
-        <p>{this.props.business.detailed_info.smoking}</p>
+        <p>{showprops.detailed_info.smoking}</p>
         <br/>
-        <p>{this.props.business.detailed_info.takeout}</p>
+        <p>{showprops.detailed_info.takeout}</p>
         <br/>
-        <p>{this.props.business.detailed_info.wifi}</p>
+        <p>{showprops.detailed_info.wifi}</p>
         <br/>
-        <p>{this.props.business.detailed_info.parking}</p>
+        <p>{showprops.detailed_info.parking}</p>
       </div>
     );
   }
 
 
 }
+
+export default BusinessShow;

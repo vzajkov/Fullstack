@@ -22,3 +22,10 @@ address3 = Address.create!({ street: '55 Super Fake Lane', town: 'San Francisco'
 address4 = Address.create!({ street: '873 NotReal Avenue', town: 'Philadelphia', state: 'Pennsylvania', country:'US', business_id: business4.id})
 address5 = Address.create!({ street: '8019 Fake Lane', town: 'Miami', state: 'Florida', country:'US', business_id: business5.id})
 address6 = Address.create!({ street: '43 NotReal Avenue', town: 'New York', state: 'New York', country:'US', business_id: business6.id})
+
+detailedinfo1 = DetailedInfo.create!({ business_id: business1.id, wifi: false, parking: false, takeout: false, smoking: false})
+detailedinfo2 = DetailedInfo.create!({ business_id: business2.id, wifi: false, parking: false, takeout: false, smoking: false})
+detailedinfo3 = DetailedInfo.create!({ business_id: business3.id, wifi: false, parking: false, takeout: false, smoking: false})
+detailedinfo4 = DetailedInfo.create!({ business_id: business4.id, wifi: false, parking: false, takeout: false, smoking: false})
+detailedinfo5 = DetailedInfo.create!({ business_id: business5.id, wifi: false, parking: false, takeout: false, smoking: false})
+detailedinfo6 = DetailedInfo.create!({ business_id: business6.id, wifi: false, parking: false, takeout: false, smoking: false})

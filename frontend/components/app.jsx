@@ -4,6 +4,7 @@ import { Route, Link, Switch } from 'react-router-dom';
 import Landing from './landing.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.js';
 import BusinessIndexContainer from './businesses/business_index_container.jsx';
+import BusinessShowContainer from './businesses/business_show_container.jsx';
 
 const App = () => (
     <div>
@@ -11,7 +12,8 @@ const App = () => (
         <Route exact path="/" component={Landing} />
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <ProtectedRoute path="/businesses" component={BusinessIndexContainer} />
+        <ProtectedRoute exact path="/businesses" component={BusinessIndexContainer} />
+        <ProtectedRoute path="/businesses/:id" component={BusinessShowContainer} />
       </Switch>
 
       <div className="footer">

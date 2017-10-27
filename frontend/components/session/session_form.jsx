@@ -30,7 +30,6 @@ class SessionForm extends React.Component {
     });
   }
   handleClick() {
-    debugger
     return this.props.login({user: {username: 'Valery', password:'starwars'}});
   }
 
@@ -43,14 +42,14 @@ class SessionForm extends React.Component {
   navLink() {
     if (this.props.formType === 'login') {
       return(
-       <div>
+       <div className="toggle-div">
          <span className="newToKelpLink">New to Kelp?
          <Link id="toggle-link" to="/signup"> Sign Up</Link>
          </span>
        </div>);
     } else {
       return(
-        <div>
+        <div className="toggle-div">
           <span className="haveKelpLink">Have an account?
           <Link id="toggle-link" to="/login"> Log In</Link>
           </span>
@@ -71,35 +70,36 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    debugger
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <div className="creds-inputs-wrapper">
           <span className="welcome">Welcome to Kelp!</span>
           <br/>
-          {this.renderErrors()}
-          {this.navLink()}
-          <div className="login-form">
-            <label className="usernameContainer">
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-                placeholder="Username"/>
-            </label>
-            <br/>
-            <label className="passwordContainer">
-              <input type="text"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-                placeholder="Password"/>
-            </label>
-            <br/>
-            <input className="submit-cred" type="submit" value="Submit" />
-          </div>
-        </form>
-        <button className="demo-login" onClick={this.handleClick}>Demo Login</button>
+          <button className="demo-login" onClick={this.handleClick}>Demo Login</button>
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            {this.renderErrors()}
+            {this.navLink()}
+            <div className="login-form">
+              <label className="usernameContainer">
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                  placeholder="Username"/>
+              </label>
+                <br/>
+              <label className="passwordContainer">
+                <input type="text"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                  placeholder="Password"/>
+              </label>
+              <br/>
+              <input className="submit-cred" type="submit" value="Submit" />
+            </div>
+          </form>
+      </div>
         <img id="welcome-img" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
       </div>
     );

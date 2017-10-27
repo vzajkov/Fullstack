@@ -9,11 +9,13 @@ class BusinessIndexItem extends React.Component{
   render() {
     return (
       <div className="business-item-wrapper">
+        <span class="list-img-wrapper"></span>
+          <div>
+            <h3 className="business-name">{this.props.business.name}</h3>
+            <span className="rating">Rating: {this.props.business.rating}</span>
+          </div>
+
         <span>
-          <h3 className="business-name">{this.props.business.name}</h3>
-          <span className="rating">Rating: {this.props.business.rating}</span>
-        </span>
-        <span >
           <span className="address">
           {this.props.business.address.street}, {this.props.business.address.town}
           <br/>

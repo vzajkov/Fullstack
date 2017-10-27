@@ -4,5 +4,25 @@
 
 
 #welcome-img {
-width: 400px;
+  width: 600px;
+  height: 500px;
+  display: inline;
+  position: relative;
+  margin-right: 0;
+}
+
+.landing-background {
+  background-image: url("https://goo.gl/JzKBj1");
+  background-size: cover;
+  height: 1000px;
+}
+
+#log-out-button {
+  font-family: sans-serif;
+  height: 25px;
+  width: 100px;
+  border: 3px solid black;
+  background-color: white;
+  font-weight: bolder;
+  text-align: center;
 }

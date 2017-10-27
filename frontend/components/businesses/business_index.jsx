@@ -15,7 +15,7 @@ class BusinessIndex extends React.Component {
 
     <div>
       <span>
-        <button onClick={this.props.logout} >Log Out</button>
+        <button id="log-out-button" onClick={this.props.logout} >Log Out</button>
       </span>
 
       <ul className="business-index-list">

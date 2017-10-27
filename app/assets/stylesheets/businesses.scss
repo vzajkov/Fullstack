@@ -3,11 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .business-index-list li {
+width: 750px;
+}
 
+.business-index-list {
+  position: relative;
+  margin-left: 200px;
 }
 
 .business-index-listitem {
   list-style-type: none;
+  font-family: sans-serif;
+}
+
+.business-index-listitem:hover {
+  background-color: #D3D3D3;
 }
 
 .business-item-wrapper {
@@ -19,6 +29,12 @@
   border-bottom: 1px solid #D3D3D3;
 }
 
+.list-img-wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: gray;
+}
+
 .business-name {
   margin-top: auto;
 }
@@ -26,6 +42,5 @@
 .address {
   width: 270px;
   height: 70px;
-  background-color: #D3D3D3;
   margin-top: 0;
 }

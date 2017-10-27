@@ -1,14 +1,17 @@
+import { connect } from 'react-redux';
 import { logout } from  '../../actions/session_actions';
 import BusinessShow from './business_show.jsx';
 const mapStateToProps = (state, ownProps) => {
+  debugger
   return {
-    business: state.entities.businesses[ownProps.match.params.id],
+    businesses: state.entities.businesses,
     loggedIn: Boolean(state.entities.session.currentUser)
 
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
+  debugger
   return {
     fetchBusiness: (id) => dispatch(ownProps.match.params.id),
     logout: () => dispatch(logout())
@@ -16,6 +19,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 export default connect(
-  mapDispatchToProps,
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(BusinessShow);

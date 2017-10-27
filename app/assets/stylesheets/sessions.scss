@@ -3,16 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-form-container {
-margin-top: 200px;
-display: flex;
+margin-top: 50px;
 justify-content: space-around;
+display: flex;
+}
 
+.creds-input-wrapper {
+  text-align: center;
 }
 
 .login-form {
 font-weight: bolder;
 margin-bottom: 0;
+}
 
+.toggle-div {
 }
 
 .login-form-box {
@@ -23,45 +28,58 @@ margin-bottom: 0;
 }
 
 #Kelp-title {
-  font-size: 35px;
+  font-size: 75px;
   font-family: sans-serif;
-  color: white;
+  color: black;
   font-weight: bolder;
-  text-shadow: -2px -2px black;
+  text-shadow: -7px -7px white, 0px -7px white, 0px 7px white;
+  position: relative;
+  margin-left: 800px;
 }
 
 .submit-cred {
 margin-top: 15px;
-width: 250px;
-height: 30px;
+width: 370px;
+height: 50px;
 background-color: red;
 color: white;
-border-radius: 5px;
+border-radius: 8px;
+font-size: 25px;
 font-weight: bolder;
 text-align: center;
+font-family: sans-serif;
+display: inline-block;
+position: relative;
+margin: 0 auto;
 }
 
 .welcome {
   margin: 10px;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
   color: red;
+  font-family: sans-serif;
+  display: inline-block;
 }
 
 .newToKelpLink {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bolder;
+  font-family: sans-serif;
   position: relative;
-  left: 35px;
-  margin-bottom: 10px;
+  left: 15px;
+  margin: 20px 0px 20px 0px;
+  display: inline-block;
 }
 
 .haveKelpLink {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bolder;
   position: relative;
-  left: 35px;
-  margin-bottom: 10px;
+  font-family: sans-serif;
+  left: 15px;
+  margin:20px 0px 20px 0px;
+  display: inline-block;
 }
 
 .header {
@@ -69,6 +87,8 @@ text-align: center;
   padding: 45px;
   display: flex;
   border-bottom: 1px solid gray;
+  opacity: 0.6;
+  z-index: 5;
 }
 
 .footer {
@@ -78,6 +98,8 @@ text-align: center;
   width: 100%;
   position: fixed;
   bottom: 0px;
+  font-weight: bolder;
+  font-family: sans-serif;
 }
 
 .footerLinks {
@@ -90,8 +112,13 @@ text-align: center;
   list-style-type: none;
   display: flex;
   font-family: sans-serif;
+  font-size: 45px;
   color: white;
   font-weight: bolder;
+  position: relative;
+  justify-content: flex-end;
+  padding-top: 10px;
+  margin-right: 10px;
 }
 
 .headerLinks li {
@@ -99,6 +126,11 @@ text-align: center;
   padding: 10px;
   border: 3px solid white;
   border-radius: 4px;
+}
+
+.headerLinks li:hover {
+  background-color: white;
+  color: black;
 }
 
 .Kelp {
@@ -110,11 +142,28 @@ text-align: center;
   margin-bottom: 15px;
   border: 1px solid #D3D3D3;
   border-radius: 5px;
-  height: 30px;
+  height: 50px;
+  width: 300px;
   position: relative;
   left: 30px;
+  display: inline-block;
 }
 
 #toggle-link {
   color: red;
+}
+
+.demo-login {
+  background: white;
+  border: 3px solid black;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  margin-left: 75px;
+  margin-top: 10px;
 }
