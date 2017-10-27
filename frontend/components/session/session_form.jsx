@@ -5,9 +5,10 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: 'Username',
-      password: 'Password'
+      username: '',
+      password: ''
     };
+    this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -17,10 +18,20 @@ class SessionForm extends React.Component {
     }
   }
 
+  componentWillMount() {
+    if (!this.props.loggedIn) {
+      return this.renderErrors();
+    }
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+  handleClick() {
+    debugger
+    return this.props.login({user: {username: 'Valery', password:'starwars'}});
   }
 
   handleSubmit(e) {
@@ -34,21 +45,20 @@ class SessionForm extends React.Component {
       return(
        <div>
          <span className="newToKelpLink">New to Kelp?
-         <Link to="/signup"> Sign Up</Link>
+         <Link id="toggle-link" to="/signup"> Sign Up</Link>
          </span>
        </div>);
     } else {
       return(
         <div>
           <span className="haveKelpLink">Have an account?
-          <Link to="/login"> Log In</Link>
+          <Link id="toggle-link" to="/login"> Log In</Link>
           </span>
        </div>);
     }
   }
 
   renderErrors() {
-    debugger
     return(
       <ul>
         {this.props.errors.map((error, i) => (
@@ -61,6 +71,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    debugger
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -73,19 +84,22 @@ class SessionForm extends React.Component {
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"/>
+                className="login-input"
+                placeholder="Username"/>
             </label>
             <br/>
             <label className="passwordContainer">
               <input type="text"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"/>
+                className="login-input"
+                placeholder="Password"/>
             </label>
             <br/>
             <input className="submit-cred" type="submit" value="Submit" />
           </div>
         </form>
+        <button className="demo-login" onClick={this.handleClick}>Demo Login</button>
         <img id="welcome-img" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
       </div>
     );

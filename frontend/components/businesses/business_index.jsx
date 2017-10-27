@@ -12,7 +12,12 @@ class BusinessIndex extends React.Component {
 
   render() {
   return (
+
     <div>
+      <span>
+        <button onClick={this.props.logout} >Log Out</button>
+      </span>
+
       <ul className="business-index-list">
       {this.props.businesses.map(business => (
         <li className="business-index-listitem">

@@ -3,7 +3,6 @@ import { login, logout, signup } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     loggedIn: Boolean(state.entities.session.currentUser),
     errors: state.errors.session_errors
@@ -15,6 +14,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const processForm = (formType === 'login') ? login : signup;
   return {
     processForm: user => dispatch(processForm(user)),
+    login: user => dispatch(login(user)),
     formType
   };
 };

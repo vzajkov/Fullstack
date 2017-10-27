@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render 'users/show'
     else
-      render json: ["Incorrect credentials"], status: 422
+      render json: ["Wrong, butterfingers!"], status: 422
     end
   end
 

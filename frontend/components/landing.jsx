@@ -14,6 +14,7 @@ const Landing = () => (
         <ul className='headerLinks'>
           <li><Link to="/login">Login</Link> </li>
           <li><Link to="/signup">Signup</Link> </li>
+          <li><Link to="/login">Demo Login</Link> </li>
         </ul>
 
 

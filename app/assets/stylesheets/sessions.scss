@@ -68,6 +68,7 @@ text-align: center;
   background-color: red;
   padding: 45px;
   display: flex;
+  border-bottom: 1px solid gray;
 }
 
 .footer {
@@ -112,4 +113,8 @@ text-align: center;
   height: 30px;
   position: relative;
   left: 30px;
+}
+
+#toggle-link {
+  color: red;
 }
