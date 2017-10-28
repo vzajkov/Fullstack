@@ -14,13 +14,13 @@ class BusinessShow extends React.Component {
         <br/>
         <p>{showprops.rating}</p>
         <br/>
-        <p>{showprops.detailed_info.smoking}</p>
+        <p>Smoking: {"" + showprops.detailed_info.smoking}</p>
         <br/>
-        <p>{showprops.detailed_info.takeout}</p>
+        <p>Takeout: {"" + showprops.detailed_info.takeout}</p>
         <br/>
-        <p>{showprops.detailed_info.wifi}</p>
+        <p>Wifi: {"" + showprops.detailed_info.wifi}</p>
         <br/>
-        <p>{showprops.detailed_info.parking}</p>
+        <p>Parking: {"" + showprops.detailed_info.parking}</p>
       </div>
     );
   }

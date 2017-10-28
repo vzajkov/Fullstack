@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class BusinessIndexItem extends React.Component{
   constructor(props) {
@@ -11,7 +11,9 @@ class BusinessIndexItem extends React.Component{
       <div className="business-item-wrapper">
         <div className="img-name"><div className="list-img-wrapper"></div>
           <div>
-            <h3 className="business-name">{this.props.business.name}</h3>
+            <Link id="index-show-link" to={"/businesses/" + this.props.business.id}>
+              <h3 className="business-name">{this.props.business.name}</h3>
+            </Link>
             <span className="rating">Rating: {this.props.business.rating}</span>
           </div>
         </div>
@@ -21,6 +23,7 @@ class BusinessIndexItem extends React.Component{
           {this.props.business.address.street}, {this.props.business.address.town}
           <br/>
           {this.props.business.address.state}, {this.props.business.address.country}
+          <br/>
           </span>
         </span>
       </div>
