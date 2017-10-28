@@ -1,8 +1,9 @@
 
-export const fetchBusinesses = () => {
+export const fetchBusinesses = (data) => {
   return $.ajax({
     method: 'get',
     url: 'api/businesses',
+    data
   });
 };
 

@@ -9,4 +9,5 @@ class Business < ApplicationRecord
     primary_key: :id,
     foreign_key: :business_id,
     class_name: 'DetailedInfo'
+
 end
