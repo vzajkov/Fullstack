@@ -20,7 +20,7 @@ class BusinessIndex extends React.Component {
           <input type="text" placeholder="Search for businesses"/>
 
         </form>
-    </nav>
+      </nav>
 
       <ul className="business-index-list">
       {this.props.businesses.map(business => (
