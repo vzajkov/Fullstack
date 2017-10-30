@@ -7,9 +7,14 @@ class SearchForm extends React.Component {
   }
 
   update(filter) {
-    debugger
     return e => {
-      return this.props.updateFiltering(filter, e.currentTarget.value);
+      if (e.currentTarget.value === 'on') {
+        debugger
+          return this.props.props.updateFiltering(filter, false);
+      } else {
+         debugger
+         return this.props.props.updateFiltering(filter, true);
+      }
     };
   }
 
@@ -24,12 +29,35 @@ class SearchForm extends React.Component {
       <div>
 
         <nav className="navbar">
-          <button id="log-out-button" onClick={this.props.logout} >Log Out</button>
           <form className="search-bar" onSubmit={this.handleSubmit}>
-            <input type="radio" name="Smoking?" value="true" onChange={this.update('smoking')}/>
+            <div className="preferencesFilter">
+            <input type="radio" name="Smoking?" value={true} onChange={this.update('smoking')}/>
             Smoking <br/>
-            <input type="radio" name="Smoking?" value="false" onChange={this.update('smoking')}/>
+            <input type="radio" name="Smoking?" onChange={this.update('smoking')}/>
             Non-Smoking <br/>
+            <input type="radio" name="Parking?" value={true} onChange={this.update('parking')}/>
+              Parking <br/>
+            <input type="radio" name="Parking?" onChange={this.update('parking')}/>
+              Parking Not Necessary <br/>
+            <input type="radio" name="Wifi?" value={true} onChange={this.update('wifi')}/>
+              Has Wifi <br/>
+            <input type="radio" name="Wifi?" onChange={this.update('wifi')}/>
+              Wifi Not Necessary <br/>
+            <input type="radio" name="Takeout?" value={true} onChange={this.update('takeout')}/>
+              Takeout <br/>
+            <input type="radio" name="Takeout?" onChange={this.update('takeout')}/>
+          </div>
+
+          <div className = "priceFilter">
+            <input type="radio" name="$" value='$' onChange={this.update('price')}/>
+              $ <br/>
+            <input type="radio" name="$$" value='$$' onChange={this.update('price')}/>
+              $$ <br/>
+            <input type="radio" name="$$$" value='$$$' onChange={this.update('price')}/>
+              $$$ <br/>
+            <input type="radio" name="$$$$" value='$$$$' onChange={this.update('price')}/>
+              $$$$ <br/>
+          </div>
             <input type="submit" value="Search"/>
           </form>
         </nav>

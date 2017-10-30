@@ -1,9 +1,11 @@
 import { connect } from 'react-redux';
 import { fetchFilteredBusinesses, updateFiltering } from '../../actions/filter_actions';
-import SearchForm from './search_form';
+import Search from './search.jsx';
 import { logout } from  '../../actions/session_actions';
+import { fetchBusinesses } from '../../actions/business_actions.js';
 
 const mapStateToProps = (state) => {
+  debugger
   return {
     filters: state.filters,
     businesses: Object.keys(state.entities.businesses).map( id => {
@@ -14,6 +16,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
+  debugger
   return {
     fetchFilteredBusinesses: (filter) => dispatch(fetchFilteredBusinesses(filter)),
     updateFiltering: (filter,value) => dispatch(updateFiltering(filter,value)),
@@ -25,4 +28,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchForm);
+)(Search);

@@ -1,4 +1,4 @@
-import * as FilterAPIUtil from '../util/business_api_util.js';
+import * as FilterAPIUtil from '../util/filter_api_util.js';
 import { receiveAllBusinesses } from './business_actions.js';
 
 export const UPDATE_FILTERS = "UPDATE_FILTERS";
@@ -17,5 +17,6 @@ export const updateFiltering = (filter, value) => (dispatch, getState) => {
 };
 
 export const fetchFilteredBusinesses = (filter) => (dispatch) => {
+  debugger
   return FilterAPIUtil.fetchFilteredBusinesses(filter).then(businesses => dispatch(receiveAllBusinesses(businesses)))
 };

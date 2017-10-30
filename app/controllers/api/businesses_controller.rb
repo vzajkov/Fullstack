@@ -1,24 +1,18 @@
-class Api::BusinessesController < ApplicationController
+ class Api::BusinessesController < ApplicationController
 
   def index
     @businesses = Business.all
+    debugger
+    @businesses = Business.joins(:detailed_info)
+    @businesses = @businesses.where(:detailed_infos => {:takeout => params[:takeout]})
+    debugger
+    @businesses = @businesses.where(:detailed_infos => {:wifi => params[:wifi]})
+    debugger
+    @businesses = @businesses.where(:detailed_infos => {:parking => params[:parking]})
+    debugger
+    @businesses = @businesses.where(:detailed_infos => {:smoking => params[:smoking]})
 
-    if params[:smoking_bool]
-      Business.joins(:detailed_info).where('detailed_info.smoking == ?', params[:smoking_bool])
-    end
-
-    if params[:wifi_bool]
-      Business.joins(:detailed_info).where('detailed_info.wifi == ?', params[:wifi_bool])
-    end
-
-    if params[:parking_bool]
-      Business.joins(:detailed_info).where('detailed_info.parking == ?', params[:parking_bool])
-    end
-
-    if params[:takeout_bool]
-      Business.joins(:detailed_info).where('detailed_info.takeout == ?', params[:takeout_bool])
-    end
-
+    debugger
     render 'businesses/index'
   end
 

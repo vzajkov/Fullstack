@@ -5,14 +5,14 @@ import Landing from './landing.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.js';
 import BusinessIndexContainer from './businesses/business_index_container.jsx';
 import BusinessShowContainer from './businesses/business_show_container.jsx';
-
+import SearchContainer from './search/search_container.jsx';
 const App = () => (
     <div>
       <Switch>
         <Route exact path="/" component={Landing} />
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <ProtectedRoute exact path="/businesses" component={BusinessIndexContainer} />
+        <ProtectedRoute exact path="/businesses" component={SearchContainer} />
         <ProtectedRoute path="/businesses/:id" component={BusinessShowContainer} />
       </Switch>
 

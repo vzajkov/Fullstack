@@ -10,5 +10,4 @@ class Business < ApplicationRecord
     foreign_key: :business_id,
     class_name: 'DetailedInfo'
 
-  accepts_nested_attributes_for :detailed_info, :address
 end

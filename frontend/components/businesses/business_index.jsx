@@ -7,15 +7,16 @@ class BusinessIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBusinesses();
+    this.props.props.fetchBusinesses();
   }
 
   render() {
+    debugger
   return (
 
     <div>
       <nav className="navbar">
-        <button id="log-out-button" onClick={this.props.logout} >Log Out</button>
+        <button id="log-out-button" onClick={this.props.props.logout} >Log Out</button>
         <form id="search-bar">
           <input type="text" placeholder="Search for businesses"/>
 
@@ -23,7 +24,7 @@ class BusinessIndex extends React.Component {
       </nav>
 
       <ul className="business-index-list">
-      {this.props.businesses.map(business => (
+      {this.props.props.businesses.map(business => (
         <li className="business-index-listitem" key={business.id}>
         <BusinessIndexItem business={business}
           key={business.id} />
