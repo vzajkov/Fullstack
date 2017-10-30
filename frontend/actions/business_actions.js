@@ -10,7 +10,7 @@ export const receiveBusiness = (business) => {
 };
 
 export const receiveAllBusinesses = (businesses) => {
-  debugger
+  //debugger
   return ({
     type: RECEIVE_ALL_BUSINESSES,
     businesses

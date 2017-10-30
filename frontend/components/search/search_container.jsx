@@ -5,7 +5,7 @@ import { logout } from  '../../actions/session_actions';
 import { fetchBusinesses } from '../../actions/business_actions.js';
 
 const mapStateToProps = (state) => {
-  debugger
+  //debugger
   return {
     filters: state.filters,
     businesses: Object.keys(state.entities.businesses).map( id => {
@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  debugger
+  //debugger
   return {
     fetchFilteredBusinesses: (filter) => dispatch(fetchFilteredBusinesses(filter)),
     updateFiltering: (filter,value) => dispatch(updateFiltering(filter,value)),

@@ -11,7 +11,7 @@ const defaultState = {
 const FilterReducer = (oldState = defaultState, action) => {
   switch (action.type) {
     case UPDATE_FILTERS :
-    debugger
+    //debugger
       return merge({}, oldState, {[action.filter]: action.value});
     default :
       return oldState;

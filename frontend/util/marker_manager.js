@@ -1,10 +1,8 @@
-/* global google:false */
 
 class MarkerManager {
   constructor(map) {
     this.map = map;
     this.markers = {};
-    this.labelIndex = 0;
   }
 
   updateMarkers(businesses) {
@@ -18,9 +16,11 @@ class MarkerManager {
         }
       }
     );
-    debugger
+    //debugger
     Object.keys(this.markers).map((id) => {
+      debugger
       if (!businessObj.hasOwnProperty(id)) {
+        debugger
         this.removeMarkerfromMap(this.markers[id]);
         delete this.markers[id];
       }
@@ -36,11 +36,11 @@ class MarkerManager {
     debugger
     const position = new google.maps.LatLng(business.address.lat, business.address.lng)
     var marker = new google.maps.Marker({
-    position: position,
-    label: this.labelIndex++,
+    position: {lat: business.address.lat, lng: business.address.lng},
     map: this.map,
     id: business.id
     });
+    this.markers[marker.id] = marker;
   }
 }
 

@@ -6,7 +6,7 @@ class BusinessShow extends React.Component {
   }
 
   render() {
-    debugger
+    //debugger
     const showprops = this.props.businesses[this.props.match.params.id];
     return (
       <div>
