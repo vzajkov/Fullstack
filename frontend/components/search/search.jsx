@@ -8,9 +8,13 @@ const Search = (props) => {
   debugger
   return (
     <div>
-      <BusinessIndex props={props}/>
-      <Map />
       <SearchForm props={props}/>
+      <div id="index-map-wrapper">
+        <BusinessIndex props={props}/>
+        <div id="map-wrapper">
+          <Map props={props} />
+        </div>
+      </div>
 
     </div>
   );
