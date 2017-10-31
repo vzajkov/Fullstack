@@ -9,12 +9,17 @@
 users = User.create!([{ username: 'Valery', password: 'starwars'}, {username: 'mrkrabs', password: 'moneymoneymoney'} ])
 
 
-business1 = Business.create!({ name: 'krustykrab', rating: 4.2 , img_url: "img_url_here"})
+business1 = Business.create!({ name: 'krusty krab', rating: 4.2 , img_url: "img_url_here"})
 business2 = Business.create!({ name: 'chumbucket', rating: 1.3 , img_url: "img_url_here"})
 business3 = Business.create!({ name: 'bobs burgers', rating: 4.2 , img_url: "img_url_here"})
 business4 = Business.create!({ name: 'harrys hotdogs', rating: 1.3 , img_url: "img_url_here"})
 business5 = Business.create!({ name: 'petes pizzas', rating: 4.2 , img_url: "img_url_here"})
-business6 = Business.create!({ name: 'karls knishes', rating: 1.3 , img_url: "img_url_here"})
+business6 = Business.create!({ name: 'karls knishes', rating: 2.7 , img_url: "img_url_here"})
+business7 = Business.create!({ name: 'cynthias coffee', rating: 5.0 , img_url: "img_url_here"})
+business8 = Business.create!({ name: 'billys breakfasts', rating: 1.0 , img_url: "img_url_here"})
+business9 = Business.create!({ name: 'daves diner', rating: 3.2 , img_url: "img_url_here"})
+business10 = Business.create!({ name: 'arthurs apple pies', rating: 2.9 , img_url: "img_url_here"})
+business11 = Business.create!({ name: 'randys rutabagas', rating: 4.7 , img_url: "img_url_here"})
 
 address1 = Address.create!({ street: '11 Fake Lane', town: 'San Francisco', state: 'California', country:'US', business_id: business1.id,
     lat: 37.8228 , lng: -122.465 })
@@ -26,12 +31,27 @@ address4 = Address.create!({ street: '873 NotReal Avenue', town: 'Philadelphia',
     lat: 39.9526, lng: -75.1652 })
 address5 = Address.create!({ street: '8019 Fake Lane', town: 'Miami', state: 'Florida', country:'US', business_id: business5.id,
     lat: 25.7617, lng: -80.1918})
-address6 = Address.create!({ street: '43 NotReal Avenue', town: 'New York', state: 'New York', country:'US', business_id: business6.id,
-    lat:  40.6998, lng: -73.9860  })
+address6 = Address.create!({ street: '76 NotReal Avenue', town: 'New York', state: 'New York', country:'US', business_id: business6.id,
+    lat:  40.743474, lng: -73.997223  })
+address7 = Address.create!({ street: '89 NotReal Street', town: 'New York', state: 'New York', country:'US', business_id: business7.id,
+    lat:  40.7998, lng: -73.9860  })
+address8 = Address.create!({ street: '425 NotReal Alley', town: 'New York', state: 'New York', country:'US', business_id: business8.id,
+    lat:  40.742893, lng: -73.986638  })
+address9 = Address.create!({ street: '643 NotReal Path', town: 'New York', state: 'New York', country:'US', business_id: business9.id,
+    lat:  40.728342, lng: -73.981900  })
+address10 = Address.create!({ street: '143 NotReal Road', town: 'New York', state: 'New York', country:'US', business_id: business10.id,
+    lat:  40.706796, lng: -74.006854  })
+address11 = Address.create!({ street: '2203 NotReal Center', town: 'New York', state: 'New York', country:'US', business_id: business11.id,
+    lat:  40.709285, lng: -74.011907  })
 
-detailedinfo1 = DetailedInfo.create!({ business_id: business1.id, wifi: false, parking: false, takeout: false, smoking: true})
-detailedinfo2 = DetailedInfo.create!({ business_id: business2.id, wifi: false, parking: false, takeout: false, smoking: false})
-detailedinfo3 = DetailedInfo.create!({ business_id: business3.id, wifi: true, parking: false, takeout: true, smoking: false})
-detailedinfo4 = DetailedInfo.create!({ business_id: business4.id, wifi: false, parking: false, takeout: false, smoking: false})
-detailedinfo5 = DetailedInfo.create!({ business_id: business5.id, wifi: false, parking: false, takeout: true, smoking: false})
-detailedinfo6 = DetailedInfo.create!({ business_id: business6.id, wifi: true, parking: true, takeout: true, smoking: true})
+detailedinfo1 = DetailedInfo.create!({ business_id: business1.id, wifi: false, parking: false, takeout: false, smoking: true, price: 0})
+detailedinfo2 = DetailedInfo.create!({ business_id: business2.id, wifi: false, parking: false, takeout: false, smoking: false, price: 1})
+detailedinfo3 = DetailedInfo.create!({ business_id: business3.id, wifi: true, parking: false, takeout: true, smoking: false, price: 2})
+detailedinfo4 = DetailedInfo.create!({ business_id: business4.id, wifi: false, parking: false, takeout: false, smoking: false, price: 3})
+detailedinfo5 = DetailedInfo.create!({ business_id: business5.id, wifi: false, parking: false, takeout: true, smoking: false, price: 2})
+detailedinfo6 = DetailedInfo.create!({ business_id: business6.id, wifi: true, parking: true, takeout: true, smoking: true, price: 3})
+detailedinfo7 = DetailedInfo.create!({ business_id: business7.id, wifi: false, parking: false, takeout: false, smoking: true, price: 0})
+detailedinfo8 = DetailedInfo.create!({ business_id: business8.id, wifi: false, parking: false, takeout: false, smoking: false, price: 1})
+detailedinfo9 = DetailedInfo.create!({ business_id: business9.id, wifi: false, parking: true, takeout: true, smoking: false, price: 2})
+detailedinfo10 = DetailedInfo.create!({ business_id: business10.id, wifi: false, parking: false, takeout: false, smoking: false, price: 3})
+detailedinfo11 = DetailedInfo.create!({ business_id: business11.id, wifi: false, parking: false, takeout: true, smoking: true, price: 0})

@@ -59,19 +59,19 @@ class SearchForm extends React.Component {
 
             <div className = "priceFilter">
               <label>
-                <input type="checkbox" name="$" value='$' onChange={this.update('price')}/>
+                <input type="checkbox" name="$" value='$' onChange={this.update('d')}/>
               $</label>
 
               <label>
-              <input type="checkbox" name="$$" value='$$' onChange={this.update('price')}/>
+              <input type="checkbox" name="$$" value='$$' onChange={this.update('dd')}/>
               $$</label>
 
               <label>
-              <input type="checkbox" name="$$$" value='$$$' onChange={this.update('price')}/>
+              <input type="checkbox" name="$$$" value='$$$' onChange={this.update('ddd')}/>
               $$$</label>
 
               <label>
-              <input type="checkbox" name="$$$$" value='$$$$' onChange={this.update('price')}/>
+              <input type="checkbox" name="$$$$" value='$$$$' onChange={this.update('dddd')}/>
               $$$$</label>
             </div>
           </form>

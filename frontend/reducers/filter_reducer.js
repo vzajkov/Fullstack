@@ -5,7 +5,11 @@ const defaultState = {
   smoking: false,
   takeout: false,
   parking: false,
-  wifi: false
+  wifi: false,
+  d: false,
+  dd: false,
+  ddd: false,
+  dddd: false
 };
 
 const FilterReducer = (oldState = defaultState, action) => {
