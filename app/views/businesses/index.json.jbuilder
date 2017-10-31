@@ -5,5 +5,6 @@
     json.set! :id, business.id
     json.set! :address, business.address
     json.set! :detailed_info, business.detailed_info
+    json.set! :img_url, business.img_url
   end
 end
