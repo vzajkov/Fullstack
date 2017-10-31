@@ -27,7 +27,7 @@ address4 = Address.create!({ street: '873 NotReal Avenue', town: 'Philadelphia',
 address5 = Address.create!({ street: '8019 Fake Lane', town: 'Miami', state: 'Florida', country:'US', business_id: business5.id,
     lat: 25.7617, lng: -80.1918})
 address6 = Address.create!({ street: '43 NotReal Avenue', town: 'New York', state: 'New York', country:'US', business_id: business6.id,
-    lat:  40.6998, lng: 73.9860  })
+    lat:  40.6998, lng: -73.9860  })
 
 detailedinfo1 = DetailedInfo.create!({ business_id: business1.id, wifi: false, parking: false, takeout: false, smoking: true})
 detailedinfo2 = DetailedInfo.create!({ business_id: business2.id, wifi: false, parking: false, takeout: false, smoking: false})

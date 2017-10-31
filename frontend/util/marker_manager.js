@@ -40,7 +40,8 @@ class MarkerManager {
     map: this.map,
     id: business.id
     });
-    this.markers[marker.id] = marker;
+    return marker;
+    // this.markers[marker.id] = marker;
   }
 }
 
