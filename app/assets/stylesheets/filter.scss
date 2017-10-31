@@ -11,7 +11,7 @@
   font-family: sans-serif;
   font-size: 20px;
   position: relative;
-  margin-left: 50px;
+  margin-left: 250px;
 }
 
 
@@ -22,25 +22,66 @@
   width: 800px;
 }
 
-.preferencesFilter label {
-  width: 220px;
-  position: relative;
-  margin-top: 15px;
-  border: 3px solid gray;
-  border-radius: 4px;
-  margin-right: 10px;
-}
 
-.priceFilter label {
-  width: 100px;
-  position: relative;
-  margin-top: 15px;
-  margin-right: 5px;
-  border: 3px solid gray;
-  border-radius: 4px;
-}
 .priceFilter {
   display: flex;
   position: relative;
   margin-left: 100px;
+}
+
+.toggled-on {
+  width: 125px;
+  position: relative;
+  margin-top: 15px;
+  font-size: 18px;
+  border: 1px solid green;
+  border-radius: 4px;
+  margin-right: 10px;
+  background: #c4f3a4;
+  text-align: center;
+  color: green;
+}
+
+.toggled-off {
+  width: 125px;
+  position: relative;
+  margin-top: 15px;
+  font-size: 18px;
+  border: 1px solid green;
+  border-radius: 4px;
+  margin-right: 10px;
+  text-align: center;
+  color: green;
+  background-color: white;
+}
+
+.toggled-off:hover {
+  box-shadow: 0px 0.5px 0.5px black;
+}
+.toggled-on:hover {
+  box-shadow: 0px 0.5px 0.5px black;
+}
+
+
+
+#smoking, #parking, #takeout, #wifi,
+#d, #dd, #ddd, #dddd {
+  display: none;
+}
+
+#nav-kelp-logo {
+  font-size: 35px;
+  font-family: sans-serif;
+  color: black;
+  font-weight: bolder;
+  text-shadow: -7px -7px 5px white,
+  0px -7px 5px white,
+  7px -7px 5px white,
+  -2px 7px 5px white,
+  7px 0px 5px white,
+  -7px 3px 5px white,
+  -2px -7px 5px white
+  ;
+  position: absolute;
+  left: 100px;
 }

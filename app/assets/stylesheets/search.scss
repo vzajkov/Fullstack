@@ -5,8 +5,23 @@
   height: 35px;
   font-family: sans-serif;
   font-size: 20px;
-  border-radius: 3px;
+  border-radius: 0px 3px 3px 0px;
   position: relative;
+}
+
+#find-submit {
+  background: white;
+  font-weight: 20px;
+  font-family: sans-serif;
+  font-size: 20px;
+  height: 32px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  padding-right: 3px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+#submit-searchbar-wrapper {
   margin-left: 300px;
   margin-bottom: 30px;
 }

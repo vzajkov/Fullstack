@@ -9,17 +9,17 @@
 users = User.create!([{ username: 'Valery', password: 'starwars'}, {username: 'mrkrabs', password: 'moneymoneymoney'} ])
 
 
-business1 = Business.create!({ name: 'krusty krab', rating: 4.2 , img_url: "img_url_here"})
-business2 = Business.create!({ name: 'chumbucket', rating: 1.3 , img_url: "img_url_here"})
-business3 = Business.create!({ name: 'bobs burgers', rating: 4.2 , img_url: "img_url_here"})
-business4 = Business.create!({ name: 'harrys hotdogs', rating: 1.3 , img_url: "img_url_here"})
-business5 = Business.create!({ name: 'petes pizzas', rating: 4.2 , img_url: "img_url_here"})
-business6 = Business.create!({ name: 'karls knishes', rating: 2.7 , img_url: "img_url_here"})
-business7 = Business.create!({ name: 'cynthias coffee', rating: 5.0 , img_url: "img_url_here"})
-business8 = Business.create!({ name: 'billys breakfasts', rating: 1.0 , img_url: "img_url_here"})
-business9 = Business.create!({ name: 'daves diner', rating: 3.2 , img_url: "img_url_here"})
-business10 = Business.create!({ name: 'arthurs apple pies', rating: 2.9 , img_url: "img_url_here"})
-business11 = Business.create!({ name: 'randys rutabagas', rating: 4.7 , img_url: "img_url_here"})
+business1 = Business.create!({ name: 'krusty krab', rating: 4.2 , img_url: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business2 = Business.create!({ name: 'chumbucket', rating: 1.3 , img_url: "https://images.pexels.com/photos/262918/pexels-photo-262918.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business3 = Business.create!({ name: 'bobs burgers', rating: 4.2 , img_url: "https://images.pexels.com/photos/225448/pexels-photo-225448.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business4 = Business.create!({ name: 'harrys hotdogs', rating: 1.3 , img_url: "https://images.pexels.com/photos/51115/restaurant-wine-glasses-served-51115.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business5 = Business.create!({ name: 'petes pizzas', rating: 4.2 , img_url: "https://images.pexels.com/photos/239975/pexels-photo-239975.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business6 = Business.create!({ name: 'karls knishes', rating: 2.7 , img_url: "https://images.pexels.com/photos/3498/italian-pizza-restaurant-italy.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business7 = Business.create!({ name: 'cynthias coffee', rating: 5.0 , img_url: "https://images.pexels.com/photos/64208/pexels-photo-64208.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business8 = Business.create!({ name: 'billys breakfasts', rating: 1.0 , img_url: "https://images.pexels.com/photos/5249/bread-food-restaurant-people.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business9 = Business.create!({ name: 'daves diner', rating: 3.2 , img_url: "https://images.pexels.com/photos/66640/pexels-photo-66640.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business10 = Business.create!({ name: 'arthurs apple pies', rating: 2.9 , img_url: "https://images.pexels.com/photos/6270/woman-flowers-holidays-girl-6270.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"})
+business11 = Business.create!({ name: 'randys rutabagas', rating: 4.7 , img_url: "https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"})
 
 address1 = Address.create!({ street: '11 Fake Lane', town: 'San Francisco', state: 'California', country:'US', business_id: business1.id,
     lat: 37.8228 , lng: -122.465 })

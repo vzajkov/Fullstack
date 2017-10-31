@@ -1,6 +1,10 @@
 #map {
   width: 600px;
   height: 600px;
+  border: 1px solid #D3D3D3;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 100px;
 }
 
 #index-map-wrapper {
@@ -8,5 +12,4 @@
 }
 
 #map-wrapper {
-  margin: auto;
 }

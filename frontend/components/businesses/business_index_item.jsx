@@ -9,7 +9,7 @@ class BusinessIndexItem extends React.Component{
   render() {
     return (
       <div className="business-item-wrapper">
-        <div className="img-name"><div className="list-img-wrapper"></div>
+        <div className="img-name"><img src={this.props.business.img_url}></img><div className="list-img-wrapper"></div>
           <div>
             <Link id="index-show-link" to={"/businesses/" + this.props.business.id}>
               <h3 className="business-name">{this.props.business.name}</h3>

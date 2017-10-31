@@ -1,0 +1,64 @@
+#show-name {
+  font-family: sans-serif;
+  font-size: 75px;
+  font-weight: bolder;
+  position: absolute;
+}
+
+#show-rating {
+  position: aboslute;
+  font-weight: bolder;
+  margin-top: 100px;
+  margin-left: 35px;
+  font-family: sans-serif;
+}
+
+#show-smoking  {
+font-family: sans-serif;
+}
+
+#show-takeout {
+font-family: sans-serif;
+}
+
+#show-wifi {
+font-family: sans-serif;
+}
+
+#show-business {
+font-family: sans-serif;
+}
+
+#show-address {
+font-family: sans-serif;
+}
+
+#show-top-wrapper {
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background: #e0e0e0;
+}
+
+#show-detailed-info {
+background-color: white;
+height: 600px;
+width: 250px;
+right: 20px;
+position: absolute;
+text-align: left;
+border: 1px solid gray;
+margin-top: 20px;
+}
+#show-detailed-inner-wrapper{
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+#show-name-wrapper {
+  position: absolute;
+  margin-left: 100px;
+  width: 200px;
+  background: red;
+}

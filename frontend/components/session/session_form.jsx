@@ -29,6 +29,7 @@ class SessionForm extends React.Component {
       [field]: e.currentTarget.value
     });
   }
+
   handleClick() {
     return this.props.login({user: {username: 'Valery', password:'starwars'}});
   }

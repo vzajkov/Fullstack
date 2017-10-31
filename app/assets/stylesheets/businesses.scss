@@ -10,6 +10,7 @@ width: 750px;
   position: relative;
   margin-left: 200px;
   margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 .business-index-listitem {
@@ -24,7 +25,7 @@ width: 750px;
 }
 
 .business-index-listitem:hover {
-  background-color: #D3D3D3;
+  background-color: #ffc4c4;
 }
 
 .business-item-wrapper {
@@ -46,6 +47,10 @@ width: 750px;
 
 .business-name {
   margin-top: auto;
+  color: #0000EE;
+}
+.business-name:hover {
+  text-decoration-line: underline;
 }
 
 .navbar {
