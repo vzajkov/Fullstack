@@ -5,6 +5,7 @@ import Landing from './landing.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.js';
 import BusinessShowContainer from './businesses/business_show_container.jsx';
 import SearchContainer from './search/search_container.jsx';
+import ReviewFormContainer from './reviews/review_form_container.jsx';
 const App = () => (
     <div>
       <Switch>
@@ -13,6 +14,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <ProtectedRoute exact path="/businesses" component={SearchContainer} />
         <ProtectedRoute path="/businesses/:id" component={BusinessShowContainer} />
+        <ProtectedRoute path="/reviews/new" component={ReviewFormContainer} />
       </Switch>
 
       <div className="footer">

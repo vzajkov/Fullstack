@@ -9,7 +9,6 @@ class MarkerManager {
     console.log("time to update");
     const businessObj = {};
     businesses.forEach((business) => (businessObj[business.id] = business));
-    debugger
     businesses.forEach((business) => {
       if (!this.markers.hasOwnProperty(business.id)) {
         this.markers[business.id] = this.createMarkerFromBusiness(business);
@@ -18,9 +17,7 @@ class MarkerManager {
     );
     //debugger
     Object.keys(this.markers).map((id) => {
-      debugger
       if (!businessObj.hasOwnProperty(id)) {
-        debugger
         this.removeMarkerfromMap(this.markers[id]);
         delete this.markers[id];
       }
@@ -33,7 +30,6 @@ class MarkerManager {
   }
 
   createMarkerFromBusiness(business) {
-    debugger
     const position = new google.maps.LatLng(business.address.lat, business.address.lng)
     var marker = new google.maps.Marker({
     position: {lat: business.address.lat, lng: business.address.lng},

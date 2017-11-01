@@ -55,3 +55,5 @@ detailedinfo8 = DetailedInfo.create!({ business_id: business8.id, wifi: false, p
 detailedinfo9 = DetailedInfo.create!({ business_id: business9.id, wifi: false, parking: true, takeout: true, smoking: false, price: 2})
 detailedinfo10 = DetailedInfo.create!({ business_id: business10.id, wifi: false, parking: false, takeout: false, smoking: false, price: 3})
 detailedinfo11 = DetailedInfo.create!({ business_id: business11.id, wifi: false, parking: false, takeout: true, smoking: true, price: 0})
+
+review1 = Review.create!({ business_id: business1.id, rating: 4 , author_id: 1, body: "I love this place!"})

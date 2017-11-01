@@ -1,25 +1,27 @@
 import { connect } from 'react-redux';
 import { logout } from  '../../actions/session_actions';
-import BusinessShow from './business_show.jsx';
+import ReviewForm from './review_form.jsx';
+import { createReview } from '../../actions/review_actions.js';
+
 const mapStateToProps = (state, ownProps) => {
   debugger
   return {
     businesses: state.entities.businesses,
     loggedIn: Boolean(state.entities.session.currentUser),
-    reviews: Object.keys(state.entities.businesses[ownProps.match.params.id].reviews),
-    currentUser: state.entities.session.currentUser
+    review: state.entities.businesses[ownProps.location.state.id].reviews[0],
+    currentUser: state.entities.session.currentUser,
+    currentBusiness: state.entities.businesses[ownProps.location.state.id]
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   //debugger
   return {
-    fetchBusiness: (id) => dispatch(ownProps.match.params.id),
-    logout: () => dispatch(logout()),
+    createReview: (review) => dispatch(createReview(review))
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BusinessShow);
+)(ReviewForm);

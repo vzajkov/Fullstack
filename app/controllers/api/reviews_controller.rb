@@ -1,9 +1,11 @@
 class Api::ReviewsController < ApplicationController
 
   def create
+    debugger
     @review = Review.new(review_params)
+    debugger
     if @review.save
-      render '/businesses/show'
+      # render '/businesses/show'
     else
       render json: ["Unable to post review!"], status: 422
     end
@@ -14,13 +16,13 @@ class Api::ReviewsController < ApplicationController
     review.destroy!
   end
 
-  def edit
+  def update
     review = Review.find(params[:id])
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:rating, :body)
+    params.require(:review).permit(:author_id, :rating, :body, :business_id,)
   end
 end

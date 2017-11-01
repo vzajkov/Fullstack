@@ -1,12 +1,19 @@
 import React from 'react';
+import ReviewIndexItem from '../reviews/review_index_item.jsx';
+import { Link } from 'react-router-dom';
 
 class BusinessShow extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  //componentDidMount
+
+
+
   render() {
     const showprops = this.props.businesses[this.props.match.params.id];
+    debugger
     return (
       <div>
         <div id="show-top-wrapper">
@@ -33,6 +40,18 @@ class BusinessShow extends React.Component {
             <br/>
             <p id="show-parking">Parking: {showprops.detailed_info.parking ? "yes" : "no"}</p>
           </div>
+        </div>
+
+        <Link to={{pathname: "/reviews/new", state: {id: this.props.match.params.id} }} >Write a review!</Link>
+
+        <div id="show-reviews">
+          <ul className="reviews-list">
+            {showprops.reviews.map((review) => (
+              <li review-list-item>
+                 <ReviewIndexItem props={review } />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     );

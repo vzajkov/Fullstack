@@ -5,8 +5,8 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: ''
+      username: '11',
+      password: '22'
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -71,6 +71,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    debugger
     return (
       <div className="login-form-container">
         <div className="creds-inputs-wrapper">

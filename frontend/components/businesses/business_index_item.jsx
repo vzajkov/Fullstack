@@ -7,6 +7,7 @@ class BusinessIndexItem extends React.Component{
   }
 
   render() {
+    debugger
     return (
       <div className="business-item-wrapper">
         <div className="img-name"><div className="list-img-wrapper"><img src={"" + this.props.business.img_url}></img></div>
