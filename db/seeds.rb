@@ -44,16 +44,38 @@ address10 = Address.create!({ street: '143 NotReal Road', town: 'New York', stat
 address11 = Address.create!({ street: '2203 NotReal Center', town: 'New York', state: 'New York', country:'US', business_id: business11.id,
     lat:  40.709285, lng: -74.011907  })
 
-detailedinfo1 = DetailedInfo.create!({ business_id: business1.id, wifi: false, parking: false, takeout: false, smoking: true, price: 0})
-detailedinfo2 = DetailedInfo.create!({ business_id: business2.id, wifi: false, parking: false, takeout: false, smoking: false, price: 1})
-detailedinfo3 = DetailedInfo.create!({ business_id: business3.id, wifi: true, parking: false, takeout: true, smoking: false, price: 2})
-detailedinfo4 = DetailedInfo.create!({ business_id: business4.id, wifi: false, parking: false, takeout: false, smoking: false, price: 3})
-detailedinfo5 = DetailedInfo.create!({ business_id: business5.id, wifi: false, parking: false, takeout: true, smoking: false, price: 2})
-detailedinfo6 = DetailedInfo.create!({ business_id: business6.id, wifi: true, parking: true, takeout: true, smoking: true, price: 3})
-detailedinfo7 = DetailedInfo.create!({ business_id: business7.id, wifi: false, parking: false, takeout: false, smoking: true, price: 0})
-detailedinfo8 = DetailedInfo.create!({ business_id: business8.id, wifi: false, parking: false, takeout: false, smoking: false, price: 1})
-detailedinfo9 = DetailedInfo.create!({ business_id: business9.id, wifi: false, parking: true, takeout: true, smoking: false, price: 2})
-detailedinfo10 = DetailedInfo.create!({ business_id: business10.id, wifi: false, parking: false, takeout: false, smoking: false, price: 3})
-detailedinfo11 = DetailedInfo.create!({ business_id: business11.id, wifi: false, parking: false, takeout: true, smoking: true, price: 0})
+detailedinfo1 = DetailedInfo.create!({ business_id: business1.id, wifi: false, parking: false, takeout: false, smoking: true, price: 0,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo2 = DetailedInfo.create!({ business_id: business2.id, wifi: false, parking: false, takeout: false, smoking: false, price: 1,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo3 = DetailedInfo.create!({ business_id: business3.id, wifi: true, parking: false, takeout: true, smoking: false, price: 2,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo4 = DetailedInfo.create!({ business_id: business4.id, wifi: false, parking: false, takeout: false, smoking: false, price: 3,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo5 = DetailedInfo.create!({ business_id: business5.id, wifi: false, parking: false, takeout: true, smoking: false, price: 2,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo6 = DetailedInfo.create!({ business_id: business6.id, wifi: true, parking: true, takeout: true, smoking: true, price: 3,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo7 = DetailedInfo.create!({ business_id: business7.id, wifi: false, parking: false, takeout: false, smoking: true, price: 0,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo8 = DetailedInfo.create!({ business_id: business8.id, wifi: false, parking: false, takeout: false, smoking: false, price: 1,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo9 = DetailedInfo.create!({ business_id: business9.id, wifi: false, parking: true, takeout: true, smoking: false, price: 2,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo10 = DetailedInfo.create!({ business_id: business10.id, wifi: false, parking: false, takeout: false, smoking: false, price: 3,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
+detailedinfo11 = DetailedInfo.create!({ business_id: business11.id, wifi: false, parking: false, takeout: true, smoking: true, price: 0,
+   sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
+   thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
 
 review1 = Review.create!({ business_id: business1.id, rating: 4 , author_id: 1, body: "I love this place!"})

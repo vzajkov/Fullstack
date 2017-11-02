@@ -1,3 +1,41 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#review-rating-radio {
+  position: absolute;
+  border: 1px solid black;
+  top: 50px;
+  left: 550px;
+}
+
+#review-body-input {
+  position: absolute;
+  height: 400px;
+  width: 800px;
+  border: 1px solid black;
+  top: 100px;
+  left: 550px;
+}
+
+#submit-review {
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 30px;
+  width: 130px;
+  color: white;
+  background-color: #ed0008;
+  font-family: sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  left: 550px;
+  top: 530px;
+  padding: 3px;
+}
+
+#rating-indicator {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}

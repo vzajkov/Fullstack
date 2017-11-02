@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101113949) do
+ActiveRecord::Schema.define(version: 20171102181809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 20171101113949) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "price", null: false
+    t.text "sunday_hours", null: false
+    t.text "monday_hours", null: false
+    t.text "tuesday_hours", null: false
+    t.text "wednesday_hours", null: false
+    t.text "thursday_hours", null: false
+    t.text "friday_hours", null: false
+    t.text "saturday_hours", null: false
   end
 
   create_table "reviews", force: :cascade do |t|

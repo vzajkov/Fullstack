@@ -6,10 +6,10 @@
 }
 
 #show-rating {
-  position: aboslute;
+  position: absolute;
   font-weight: bolder;
-  margin-top: 100px;
-  margin-left: 35px;
+  top: 150px;
+  left: 350px;
   font-family: sans-serif;
 }
 
@@ -34,31 +34,128 @@ font-family: sans-serif;
 }
 
 #show-top-wrapper {
-  height: 300px;
+  height: 500px;
   width: 100%;
   border-bottom: 1px solid gray;
   background: #e0e0e0;
+  position: absolute;
 }
 
-#show-detailed-info {
-background-color: white;
-height: 600px;
-width: 250px;
-right: 20px;
-position: absolute;
-text-align: left;
-border: 1px solid gray;
-margin-top: 20px;
-}
-#show-detailed-inner-wrapper{
+
+#show-detailed-info-wrapper{
   position: absolute;
-  margin-left: 40px;
+  top: 300px;
   margin-top: 20px;
+  background-color: white;
+  height: 600px;
+  width: 350px;
+  right: 20px;
+  position: absolute;
+  text-align: left;
+  border: 1px solid gray;
 }
 
 #show-name-wrapper {
   position: absolute;
-  margin-left: 100px;
-  width: 200px;
+  margin-left: 300px;
+  width: 800px;
   background: red;
+}
+#business-img-wrapper {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  left: 800px;
+  top: 100px;
+}
+
+#business-item-address-wrapper {
+  border: 1px solid black;
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  font-size: 30px;
+  font-family: sans-serif;
+  padding: 20px;
+  width: 300px;
+}
+
+#inner-detailed-info-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.titles {
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: red;
+  margin-bottom: 5px;
+}
+
+
+#show-reviews {
+  position: absolute;
+  font-family: sans-serif;
+  top: 550px;
+  left: 100px;
+  width: 1150px;
+}
+
+#show-reviews:last-of-type {
+  margin-bottom: 100px;
+}
+
+#review-index-item {
+  border-bottom: 1px solid #D3D3D3;
+  margin: 10px;
+}
+
+#link-to-create-review {
+  border: 1px solid black;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding: 6px 10px 6px 10px;
+  background-color: #ed0008;
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  top: 30px;
+  right: 600px;
+}
+
+#edit-review-link {
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 150px;
+  background-color: #ed0008;
+  text-align: center;
+  padding: 5px;
+  font-weight: bolder;
+  height: 25px;
+  color: white;
+}
+
+#delete-review-button {
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 25px;
+  width: 150px;
+  margin-left: 700px;
+  text-align: center;
+  padding: 3px;
+  font-weight: bolder;
+}
+
+#review-item-wrapper {
+height: 200px;
+font-family: sans-serif;
+}
+
+#review-info-wrapper {
+  margin-top: 20px;
 }
