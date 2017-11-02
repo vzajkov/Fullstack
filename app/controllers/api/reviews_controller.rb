@@ -1,9 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
   def create
-    debugger
     @review = Review.new(review_params)
-    debugger
     if @review.save
       # render '/businesses/show'
     else
@@ -17,7 +15,11 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    review = Review.find(params[:id])
+    @review = Review.find(params[:review][:id])
+    if @review.update_attributes(review_params)
+    else
+      render json: ["could not update review!"], status: 422
+    end
   end
 
   private

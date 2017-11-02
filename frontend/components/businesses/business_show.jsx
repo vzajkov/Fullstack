@@ -13,6 +13,10 @@ class BusinessShow extends React.Component {
 
   render() {
     const showprops = this.props.businesses[this.props.match.params.id];
+    const currentUser = this.props.currentUser;
+    const history = this.props.history;
+    const deleteReview = this.props.deleteReview;
+
     debugger
     return (
       <div>
@@ -48,7 +52,7 @@ class BusinessShow extends React.Component {
           <ul className="reviews-list">
             {showprops.reviews.map((review) => (
               <li review-list-item>
-                 <ReviewIndexItem props={review } />
+                 <ReviewIndexItem review={review} history={history} deleteReview={deleteReview} currentUser={currentUser} currentBusiness={showprops}  />
               </li>
             ))}
           </ul>

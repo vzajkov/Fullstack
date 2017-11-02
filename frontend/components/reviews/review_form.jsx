@@ -10,6 +10,7 @@ class ReviewForm extends React.Component {
       author_id: this.props.currentUser.id
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   update(field) {
@@ -20,25 +21,58 @@ class ReviewForm extends React.Component {
     };
   }
 
+  handleEdit(e) {
+    debugger
+    e.preventDefault();
+    // const review = this.setState({
+    //   id: this.props.review_id
+    // }, this.props.editReview({review: this.state}));
+    this.props.editReview({review: {
+        rating: this.state.rating,
+        body: this.state.body,
+        business_id: this.props.currentBusiness.id,
+        author_id: this.props.currentUser.id,
+        id: this.props.review_id
+      }
+    });
+    this.props.history.push(`/businesses/${this.props.currentBusiness.id}`);
+  }
+
   handleSubmit(e) {
     debugger
     e.preventDefault();
     const review = this.state;
-    this.props.createReview({review})
-
+    this.props.createReview({review});
+    this.props.history.push(`/businesses/`);
   }
 
   render() {
     debugger
     return(
-      <form className="review-form" onSubmit={this.handleSubmit}>
+      <form className="review-form" onSubmit={this.props.currentUser.id === this.props.review.author_id ? this.handleEdit : this.handleSubmit}>
         <input type="text" onChange={this.update('body')} placeholder="Write your review!"/>
         <label htmlFor="rating-radio">Rating: </label>
+
+        <label>1
         <input id="rating-radio" type="radio" name="rating" value="1" onChange={this.update('rating')} />
+        </label>
+
+        <label>2
         <input id="rating-radio" type="radio" name="rating" value="2" onChange={this.update('rating')} />
+        </label>
+
+        <label>3
         <input id="rating-radio" type="radio" name="rating" value="3" onChange={this.update('rating')} />
+        </label>
+
+        <label>4
         <input id="rating-radio" type="radio" name="rating" value="4" onChange={this.update('rating')} />
+        </label>
+
+        <label>5
         <input id="rating-radio" type="radio" name="rating" value="5" onChange={this.update('rating')} />
+        </label>
+
         <input type="submit" value="Submit Review!"/>
       </form>
     );

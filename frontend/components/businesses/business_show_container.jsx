@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { logout } from  '../../actions/session_actions';
 import BusinessShow from './business_show.jsx';
+import { deleteReview } from '../../actions/review_actions.js';
 const mapStateToProps = (state, ownProps) => {
   debugger
   return {
@@ -14,8 +15,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   //debugger
   return {
-    fetchBusiness: (id) => dispatch(ownProps.match.params.id),
     logout: () => dispatch(logout()),
+    deleteReview: (review) => dispatch(deleteReview(review))
   };
 };
 
