@@ -8,10 +8,33 @@
 #show-rating {
   position: absolute;
   font-weight: bolder;
-  top: 150px;
+  top: 120px;
   left: 350px;
   font-family: sans-serif;
+  width: 300px;
+  height: 80px;
 }
+
+.star-wrapper {
+  display: flex;
+  width: 280px;
+  height: 60px;
+  position: absolute;
+}
+
+#review-star {
+  height: 30px;
+  width: 50px;
+  background-color: red;
+  display: inline;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 7px;
+}
+
 
 #show-smoking  {
 font-family: sans-serif;
@@ -70,14 +93,13 @@ font-family: sans-serif;
 }
 
 #business-item-address-wrapper {
-  border: 1px solid black;
   position: absolute;
   left: 300px;
   top: 200px;
   font-size: 30px;
   font-family: sans-serif;
   padding: 20px;
-  width: 300px;
+  width: 400px;
 }
 
 #inner-detailed-info-wrapper {

@@ -5,10 +5,61 @@ import { Link } from 'react-router-dom';
 class BusinessShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleRating = this.handleRating.bind(this);
   }
 
   //componentDidMount
 
+  handleRating() {
+    debugger
+    const rating = Math.floor(this.props.businesses[this.props.match.params.id].rating);
+    if (rating === 1 ) {
+      return (
+        <div className="star-wrapper">
+          <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        </div>
+      );
+    } else if (rating === 2) {
+      return (
+      <div className="star-wrapper">
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    } else if (rating === 3) {
+      return (
+      <div className="star-wrapper">
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    } else if (rating === 4) {
+      debugger
+      return (
+      <div className="star-wrapper">
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    } else if (rating === 5) {
+      return (
+      <div className="star-wrapper">
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <br/>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <br/>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <br/>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <br/>
+        <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    }
+  }
 
 
   render() {
@@ -28,14 +79,12 @@ class BusinessShow extends React.Component {
           <div id="business-item-address-wrapper">
             <p>Address: </p>
             <p id="show-address">{showprops.address.street}</p>
-            <p id="show-address">{showprops.address.town}</p>
-            <p id="show-address">{showprops.address.state}</p>
-            <p id="show-address">{showprops.address.country}</p>
+            <p id="show-address">{showprops.address.town}, {showprops.address.state}, {showprops.address.country}</p>
           </div>
           <br/>
         </div>
 
-        <p id="show-rating">Rating: {showprops.rating}</p>
+        <div id="show-rating">{this.handleRating()}</div>
 
         <div id="business-img-wrapper">
           <img src={"" + showprops.img_url}></img>
