@@ -5,6 +5,9 @@
     @businesses = Business.all
 
     @businesses = Business.joins(:detailed_info)
+    if params[:name] && params[:name] != ""
+      @businesses = @businesses.where(:name => params[:name])
+    end
 
     if params[:takeout] == "true"
       @businesses = @businesses.where(:detailed_infos => {:takeout => params[:takeout]})

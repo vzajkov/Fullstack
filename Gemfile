@@ -30,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor'
 gem 'jquery-rails'
 # Use Capistrano for deployment
+gem 'pg_search'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do

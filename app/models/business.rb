@@ -1,4 +1,7 @@
 class Business < ApplicationRecord
+include PgSearch
+
+pg_search_scope :search_for, against: %i(name)
 
   has_one :address,
     primary_key: :id,

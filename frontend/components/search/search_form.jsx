@@ -19,15 +19,21 @@ class SearchForm extends React.Component {
   update(filter) {
     return e => {
       //debugger
-      if (e.currentTarget.checked) {
-        //debugger
-          return this.props.props.updateFiltering(filter, true);
+      if (filter === 'name') {
+        return this.props.props.updateFiltering(filter, e.currentTarget.value)
       } else {
-         //debugger
-         return this.props.props.updateFiltering(filter, false);
-      }
+        if (e.currentTarget.checked) {
+          //debugger
+            return this.props.props.updateFiltering(filter, true);
+        } else {
+           //debugger
+           return this.props.props.updateFiltering(filter, false);
+        }
     };
   }
+  }
+
+
 
   toggleParking() {
     this.setState({ parkingStatus: !this.state.parkingStatus});
@@ -47,6 +53,7 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
   }
 
   toggle$ () {
@@ -79,13 +86,14 @@ class SearchForm extends React.Component {
               <input
                 id="search-bar"
                 type="text"
-                placeholder="restuarants,cafes, diners"/>
+                placeholder="restuarants,cafes, diners"
+                onChange={this.update('name')}/>
             </div>
           </form>
 
 
         <nav className="filter-nav">
-          <form className="filter-bar" onSubmit={this.handleSubmit}>
+          <form className="filter-bar">
             <div className="preferencesFilter">
               <label htmlFor="smoking" onClick={this.toggleSmoking.bind(this)} className={this.state.smokingStatus ? 'toggled-on' : 'toggled-off'}>
               Smoking</label>
