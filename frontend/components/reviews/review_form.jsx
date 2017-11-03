@@ -35,7 +35,7 @@ class ReviewForm extends React.Component {
         id: this.props.review_id
       }
     });
-    this.props.history.push(`/businesses/${this.props.currentBusiness.id}`);
+    this.props.history.push(`/businesses/`);
   }
 
   handleSubmit(e) {

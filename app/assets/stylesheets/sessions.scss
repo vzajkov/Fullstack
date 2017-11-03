@@ -160,6 +160,16 @@ margin: 0 auto;
   color: red;
 }
 
+#session-errors {
+  color: red;
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  position: absolute;
+  left: 280px;
+  top: 450px;
+}
+
 .demo-login {
   background: white;
   border: 3px solid black;

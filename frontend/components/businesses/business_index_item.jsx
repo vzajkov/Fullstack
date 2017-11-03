@@ -4,6 +4,54 @@ import { Link, withRouter } from 'react-router-dom';
 class BusinessIndexItem extends React.Component{
   constructor(props) {
     super(props);
+    this.handleRating = this.handleRating.bind(this)
+  }
+
+  handleRating() {
+    debugger
+    const rating = Math.floor(this.props.business.rating);
+    if (rating === 1 ) {
+      return (
+        <div className="index-star-wrapper">
+          <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        </div>
+      );
+    } else if (rating === 2) {
+      return (
+      <div className="index-star-wrapper">
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    } else if (rating === 3) {
+      return (
+      <div className="index-star-wrapper">
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    } else if (rating === 4) {
+      debugger
+      return (
+      <div className="index-star-wrapper">
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    } else if (rating === 5) {
+      return (
+      <div className="index-star-wrapper">
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+        <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
+      </div>
+    );
+    }
   }
 
   render() {
@@ -15,7 +63,7 @@ class BusinessIndexItem extends React.Component{
             <Link id="index-show-link" to={"/businesses/" + this.props.business.id}>
               <h3 className="business-name">{this.props.business.name}</h3>
             </Link>
-            <span className="rating">Rating: {this.props.business.rating}</span>
+            <span className="rating">{this.handleRating()}</span>
           </div>
         </div>
 

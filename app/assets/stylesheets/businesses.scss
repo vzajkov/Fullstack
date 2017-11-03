@@ -28,6 +28,28 @@ width: 750px;
   background-color: #ffc4c4;
 }
 
+#index-review-star {
+  height: 30px;
+  width: 30px;
+  display: inline;
+  text-align: center;
+  font-size: 20px;
+  background-color: red;
+  margin: 3px;
+  color: white;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+#index-review-icon {
+
+}
+
+.index-star-wrapper {
+  width: 290px;
+  height: 40px;
+}
+
 .business-item-wrapper {
   display: flex;
   justify-content: space-between;
