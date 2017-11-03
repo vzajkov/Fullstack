@@ -18,19 +18,16 @@ class SearchForm extends React.Component {
 
   update(filter) {
     return e => {
-      //debugger
       if (filter === 'name') {
-        return this.props.props.updateFiltering(filter, e.currentTarget.value)
+        return this.props.props.updateFiltering(filter, e.currentTarget.value);
       } else {
         if (e.currentTarget.checked) {
-          //debugger
             return this.props.props.updateFiltering(filter, true);
         } else {
-           //debugger
            return this.props.props.updateFiltering(filter, false);
         }
-    };
-  }
+    }
+  };
   }
 
 

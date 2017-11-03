@@ -5,7 +5,7 @@
     @businesses = Business.all
 
     @businesses = Business.joins(:detailed_info)
-
+    
     if params[:name] && params[:name] != ""
       @businesses = @businesses.search_for(params[:name])
     end
