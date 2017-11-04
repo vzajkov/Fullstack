@@ -11,7 +11,6 @@ class SessionForm extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.toggleLinks = this.toggleLinks.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
