@@ -1,3 +1,4 @@
+// Template for Session Form produced by App Academy, edited for purposes of project
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -10,17 +11,12 @@ class SessionForm extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.toggleLinks = this.toggleLinks.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/businesses');
-    }
-  }
-
-  componentWillMount() {
-    if (!this.props.loggedIn) {
-      return this.renderErrors();
     }
   }
 
@@ -30,7 +26,7 @@ class SessionForm extends React.Component {
     });
   }
 
-  handleClick() {
+  handleDemoLogin() {
     return this.props.login({user: {username: 'Valery', password:'starwars'}});
   }
 
@@ -40,7 +36,7 @@ class SessionForm extends React.Component {
     this.props.processForm({user});
   }
 
-  navLink() {
+  toggleLinks() {
     if (this.props.formType === 'login') {
       return(
        <div className="toggle-div">
@@ -61,8 +57,8 @@ class SessionForm extends React.Component {
   renderErrors() {
     return(
       <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+        {this.props.errors.map((error) => (
+          <li>
             {error}
           </li>
         ))}
@@ -77,10 +73,10 @@ class SessionForm extends React.Component {
         <div className="creds-inputs-wrapper">
           <span className="welcome">Welcome to Kelp!</span>
           <br/>
-          <button className="demo-login" onClick={this.handleClick}>Demo Login</button>
+          <button className="demo-login" onClick={this.handleDemoLogin}>Demo Login</button>
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <div id="session-errors">{this.renderErrors()}</div>
-            {this.navLink()}
+            {this.toggleLinks()}
             <div className="login-form">
               <label className="usernameContainer">
                 <input type="text"
