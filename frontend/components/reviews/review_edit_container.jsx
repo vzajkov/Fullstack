@@ -4,7 +4,7 @@ import ReviewForm from './review_form.jsx';
 import { createReview, editReview } from '../../actions/review_actions.js';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
+
   return {
     businesses: state.entities.businesses,
     loggedIn: Boolean(state.entities.session.currentUser),
@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  //debugger
+  //
   return {
     createReview: (review) => dispatch(createReview(review)),
     editReview: (review) => dispatch(editReview(review))

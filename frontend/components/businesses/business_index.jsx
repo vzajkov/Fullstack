@@ -11,7 +11,7 @@ class BusinessIndex extends React.Component {
   }
 
   render() {
-    //debugger
+    //
   return (
 
     <div>

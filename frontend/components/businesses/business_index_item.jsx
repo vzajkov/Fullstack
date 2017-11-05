@@ -8,7 +8,7 @@ class BusinessIndexItem extends React.Component{
   }
 
   handleRating() {
-    debugger
+
     const rating = Math.floor(this.props.business.rating);
     if (rating === 1 ) {
       return (
@@ -32,7 +32,7 @@ class BusinessIndexItem extends React.Component{
       </div>
     );
     } else if (rating === 4) {
-      debugger
+
       return (
       <div className="index-star-wrapper">
         <div id="index-review-star"><i id="index-review-icon" class="fa fa-star" aria-hidden="true"></i></div>
@@ -55,7 +55,7 @@ class BusinessIndexItem extends React.Component{
   }
 
   render() {
-    debugger
+
     return (
       <div className="business-item-wrapper">
         <div className="img-name"><div className="list-img-wrapper"><img src={"" + this.props.business.img_url}></img></div>

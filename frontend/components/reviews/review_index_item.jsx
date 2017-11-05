@@ -7,9 +7,9 @@ class ReviewIndexItem extends React.Component {
   }
 
   toggleLink() {
-    debugger
+    
     if (this.props.review.author_id === this.props.currentUser.id) {
-      debugger
+      
       return (
       <div>
         <Link id="edit-review-link" to={{pathname: "/reviews/" + this.props.review.id + "/edit", state: {currentBusiness: this.props.currentBusiness, review: this.props.review} }}>Edit your Review!</Link>
@@ -20,13 +20,13 @@ class ReviewIndexItem extends React.Component {
   }
 
   handleClick() {
-    debugger
+    
     this.props.deleteReview(this.props.review);
     this.props.history.push(`/businesses/`);
   }
 
   render() {
-    debugger
+    
     return (
       <div id="review-item-wrapper">
         {this.toggleLink()}

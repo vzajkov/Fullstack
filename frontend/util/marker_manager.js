@@ -15,7 +15,7 @@ class MarkerManager {
         }
       }
     );
-    //debugger
+    //
     Object.keys(this.markers).map((id) => {
       if (!businessObj.hasOwnProperty(id)) {
         this.removeMarkerfromMap(this.markers[id]);

@@ -22,7 +22,7 @@ class ReviewForm extends React.Component {
   }
 
   handleEdit(e) {
-    debugger
+
     e.preventDefault();
     // const review = this.setState({
     //   id: this.props.review_id
@@ -39,7 +39,7 @@ class ReviewForm extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger
+
     e.preventDefault();
     const review = this.state;
     this.props.createReview({review});
@@ -47,7 +47,7 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    debugger
+
     return(
       <form className="review-form" onSubmit={this.props.currentUser.id === this.props.review.author_id ? this.handleEdit : this.handleSubmit}>
         <input id="review-body-input" type="text" onChange={this.update('body')} placeholder="Write your review!"/>

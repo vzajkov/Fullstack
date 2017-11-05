@@ -17,6 +17,6 @@ export const updateFiltering = (filter, value) => (dispatch, getState) => {
 };
 
 export const fetchFilteredBusinesses = (filter) => (dispatch) => {
-  //debugger
+  //
   return FilterAPIUtil.fetchFilteredBusinesses(filter).then(businesses => dispatch(receiveAllBusinesses(businesses)))
 };

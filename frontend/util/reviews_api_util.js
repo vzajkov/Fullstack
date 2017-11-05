@@ -1,5 +1,5 @@
 export const createReview = (data) => {
-  debugger
+  
   return $.ajax({
     method: 'post',
     url: 'api/reviews',
@@ -8,7 +8,7 @@ export const createReview = (data) => {
 };
 
 export const editReview = (data) => {
-  debugger
+  
   return $.ajax({
       method: 'patch',
       url: `api/reviews/${data.id}`,
@@ -17,7 +17,7 @@ export const editReview = (data) => {
 };
 
 export const deleteReview = (id) => {
-  debugger
+  
   return $.ajax({
     method: 'delete',
     url: `api/reviews/${id}`,
