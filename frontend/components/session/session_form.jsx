@@ -1,4 +1,4 @@
-// Template for Session Form produced by App Academy, edited for purposes of project
+// Session Form produced by App Academy, edited for purposes of project
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 

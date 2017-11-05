@@ -1,4 +1,4 @@
-// Template for Session Form Container produced by App Academy
+// Session Form Container produced by App Academy
 
 import { connect } from 'react-redux';
 import { login, logout, signup } from '../../actions/session_actions';

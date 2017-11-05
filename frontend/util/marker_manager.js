@@ -1,4 +1,4 @@
-//Reference App Academy and Google Maps API documents
+//Referenced App Academy template and Google Maps API documents for this file
 class MarkerManager {
   constructor(map) {
     this.map = map;
