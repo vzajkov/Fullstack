@@ -1,5 +1,5 @@
 #show-name {
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 75px;
   font-weight: bolder;
   position: absolute;
@@ -10,7 +10,7 @@
   font-weight: bolder;
   top: 120px;
   left: 350px;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   width: 300px;
   height: 80px;
 }
@@ -33,27 +33,28 @@
   font-size: 35px;
   text-align: center;
   padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 
 #show-smoking  {
-font-family: sans-serif;
+font-family: 'Noto Sans', sans-serif;
 }
 
 #show-takeout {
-font-family: sans-serif;
+font-family: 'Noto Sans', sans-serif;
 }
 
 #show-wifi {
-font-family: sans-serif;
+font-family:'Noto Sans', sans-serif;
 }
 
 #show-business {
-font-family: sans-serif;
+font-family:'Noto Sans', sans-serif;
 }
 
 #show-address {
-font-family: sans-serif;
+font-family:'Noto Sans', sans-serif;
 }
 
 #show-top-wrapper {
@@ -67,10 +68,10 @@ font-family: sans-serif;
 
 #show-detailed-info-wrapper{
   position: absolute;
-  top: 300px;
+  top: 200px;
   margin-top: 20px;
   background-color: white;
-  height: 600px;
+  height: 680px;
   width: 350px;
   right: 20px;
   position: absolute;
@@ -97,7 +98,7 @@ font-family: sans-serif;
   left: 300px;
   top: 200px;
   font-size: 30px;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   padding: 20px;
   width: 400px;
 }
@@ -107,13 +108,13 @@ font-family: sans-serif;
   top: 20px;
   left: 40px;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .titles {
   font-weight: bolder;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   color: red;
   margin-bottom: 5px;
 }
@@ -121,7 +122,7 @@ font-family: sans-serif;
 
 #show-reviews {
   position: absolute;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   top: 550px;
   left: 100px;
   width: 1150px;
@@ -139,7 +140,7 @@ font-family: sans-serif;
 #link-to-create-review {
   border: 1px solid black;
   border-radius: 3px;
-  font-family: sans-serif;
+  font-family:'Noto Sans', sans-serif;
   font-size: 30px;
   padding: 6px 10px 6px 10px;
   background-color: #ed0008;
@@ -157,6 +158,8 @@ font-family: sans-serif;
   background-color: #ed0008;
   text-align: center;
   padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-weight: bolder;
   height: 25px;
   color: white;
@@ -175,7 +178,7 @@ font-family: sans-serif;
 
 #review-item-wrapper {
 height: 200px;
-font-family: sans-serif;
+font-family:'Noto Sans', sans-serif;
 }
 
 #review-info-wrapper {

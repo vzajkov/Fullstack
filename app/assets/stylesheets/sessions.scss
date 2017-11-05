@@ -29,7 +29,7 @@ margin-bottom: 0;
 
 #Kelp-title {
   font-size: 75px;
-  font-family: sans-serif;
+  font-family:  sans-serif;
   color: black;
   font-weight: bolder;
   text-shadow: -7px -7px 5px white,
@@ -54,7 +54,7 @@ border-radius: 8px;
 font-size: 25px;
 font-weight: bolder;
 text-align: center;
-font-family: sans-serif;
+font-family: 'Noto Sans', sans-serif;
 display: inline-block;
 position: relative;
 margin: 0 auto;
@@ -65,14 +65,14 @@ margin: 0 auto;
   font-size: 40px;
   font-weight: bolder;
   color: red;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   display: inline-block;
 }
 
 .newToKelpLink {
   font-size: 30px;
   font-weight: bolder;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   position: relative;
   left: 15px;
   margin: 20px 0px 20px 0px;
@@ -83,7 +83,7 @@ margin: 0 auto;
   font-size: 30px;
   font-weight: bolder;
   position: relative;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   left: 15px;
   margin:20px 0px 20px 0px;
   display: inline-block;
@@ -106,7 +106,7 @@ margin: 0 auto;
   position: fixed;
   bottom: 0px;
   font-weight: bolder;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .footerLinks {
@@ -118,7 +118,7 @@ margin: 0 auto;
 .headerLinks {
   list-style-type: none;
   display: flex;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 45px;
   color: white;
   font-weight: bolder;
@@ -162,7 +162,7 @@ margin: 0 auto;
 
 #session-errors {
   color: red;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 25px;
   font-weight: bolder;
   position: absolute;
@@ -176,7 +176,7 @@ margin: 0 auto;
   text-align: center;
   height: 50px;
   width: 200px;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: bolder;
   border-radius: 5px;
   display: inline-block;
