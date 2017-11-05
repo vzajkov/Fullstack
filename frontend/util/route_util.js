@@ -1,4 +1,4 @@
-//Produced by App Academy
+//Produced by App Academy, edited for purposes of project
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
