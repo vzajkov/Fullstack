@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class BusinessIndexItem extends React.Component{
   constructor(props) {
     super(props);
-    this.handleRating = this.handleRating.bind(this)
+    this.handleRating = this.handleRating.bind(this);
   }
 
   handleRating() {

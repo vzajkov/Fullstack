@@ -1,4 +1,4 @@
-
+//Reference App Academy and Google Maps API documents
 class MarkerManager {
   constructor(map) {
     this.map = map;

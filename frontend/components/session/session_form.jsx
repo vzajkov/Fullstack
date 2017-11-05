@@ -66,7 +66,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    debugger
     return (
       <div className="login-form-container">
         <div className="creds-inputs-wrapper">

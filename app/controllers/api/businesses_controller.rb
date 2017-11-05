@@ -5,11 +5,11 @@
     @businesses = Business.all
 
     @businesses = Business.joins(:detailed_info)
-    
+    #Template referenced from "Implementing Full Text Search in Rails with Postgres", by Ryan Stenberg
     if params[:name] && params[:name] != ""
       @businesses = @businesses.search_for(params[:name])
     end
-
+    #End of template reference
     if params[:takeout] == "true"
       @businesses = @businesses.where(:detailed_infos => {:takeout => params[:takeout]})
     end

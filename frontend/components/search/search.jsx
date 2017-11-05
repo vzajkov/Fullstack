@@ -5,7 +5,6 @@ import BusinessIndex from '../businesses/business_index.jsx';
 import Map from '../map/map.jsx';
 
 const Search = (props) => {
-  debugger
   return (
     <div>
       <SearchForm props={props}/>
