@@ -24,9 +24,6 @@ class ReviewForm extends React.Component {
   handleEdit(e) {
 
     e.preventDefault();
-    // const review = this.setState({
-    //   id: this.props.review_id
-    // }, this.props.editReview({review: this.state}));
     this.props.editReview({review: {
         rating: this.state.rating,
         body: this.state.body,
@@ -79,4 +76,4 @@ class ReviewForm extends React.Component {
   }
 }
 
-export default withRouter(ReviewForm)
+export default withRouter(ReviewForm);

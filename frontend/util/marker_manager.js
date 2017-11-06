@@ -31,7 +31,7 @@ class MarkerManager {
 
   createMarkerFromBusiness(business) {
     var myMap = this.map;
-    const position = new google.maps.LatLng(business.address.lat, business.address.lng)
+    const position = new google.maps.LatLng(business.address.lat, business.address.lng);
     var marker = new google.maps.Marker({
     position: {lat: business.address.lat, lng: business.address.lng},
     map: this.map,

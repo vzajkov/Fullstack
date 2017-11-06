@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import { logout } from  '../../actions/session_actions';
 import ReviewForm from './review_form.jsx';
-import { createReview } from '../../actions/review_actions.js';
+import { createReview, editReview } from '../../actions/review_actions.js';
 
 const mapStateToProps = (state, ownProps) => {
-  
+
   return {
     businesses: state.entities.businesses,
-    loggedIn: Boolean(state.entities.session.currentUser),
+    loggedIn: Boolean(state.sessions.currentUser),
     review_id: null,
     review: {author_id: null},
-    currentUser: state.entities.session.currentUser,
+    currentUser: state.sessions.currentUser,
     currentBusiness: state.entities.businesses[ownProps.location.state.id]
   };
 };

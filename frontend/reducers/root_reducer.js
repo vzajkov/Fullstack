@@ -10,7 +10,8 @@ const RootReducer =
     errors: ErrorReducer,
     entities: EntitiesReducer,
     filters: FilterReducer,
-    reviews: ReviewReducer
+    reviews: ReviewReducer,
+    sessions: SessionReducer
   });
 
 export default RootReducer;
