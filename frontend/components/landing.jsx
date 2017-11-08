@@ -1,6 +1,5 @@
 import React from 'react';
-import SessionFormContainer from './session/session_form_container.jsx';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Landing = () => (
   <div className="landing-background">

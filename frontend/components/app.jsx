@@ -1,12 +1,13 @@
 import React from 'react';
-import SessionFormContainer from './session/session_form_container.jsx';
-import { Route, Link, Switch } from 'react-router-dom';
-import Landing from './landing.jsx';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.js';
+import Landing from './landing.jsx';
+import SessionFormContainer from './session/session_form_container.jsx';
 import BusinessShowContainer from './businesses/business_show_container.jsx';
 import SearchContainer from './search/search_container.jsx';
 import ReviewFormContainer from './reviews/review_form_container.jsx';
 import ReviewEditContainer from './reviews/review_edit_container.jsx';
+
 const App = () => (
     <div>
       <Switch>
