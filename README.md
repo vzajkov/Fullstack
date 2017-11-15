@@ -1,7 +1,7 @@
 # README
 Welcome to Kelp!
 
-This app is a clone of Yelp for users to create, read, update, and delete reviews. 
+This is a single page web app inspired by Yelp for users to create, read, update, and delete reviews. 
 The technologies used are primarily Ruby on Rails for the back-end and React.js/Redux for the front-end.
 
 I'd like to talk about two features in which I felt like I was venturing into new territory. These were the search and filter features for the business index page. 
@@ -25,8 +25,10 @@ update(filter) {
   };
   }
   ```
-  In order to make sure I followed good practice, I tried to keep my code as DRY as possible. I feel the above code is a good example. The filters were packaged together but the input type (text) was different for the search bar than the other filters (checkboxes). 
+  In order to make sure I followed good practice, I tried to keep my code as DRY as possible. I feel the above code is a good example. The filters were packaged together but the input type (text) was different for the search bar than the other filters (checkboxes). I also reused the same form for creating and editing a review, based on whether or not the current user id matched the author id of the review in question.
   
- As I get closer to the end of my project, there are a few aspects I will continue working on. I want to create user profiles to allow more user interactivity. The user profiles should feature all the user's reviews, their photo, and the ability to receive compliments. I'd also like to add the aggregation aspect to reviews, that update the rating for a business based on the average of all the user reviews. The reviews should also be limited to one per business per user. I would also like to add some features to the map, including bounds, an index to correspond businesses with markers, and an info box which opens when the map marker is clicked.
+  One of the new challenges was implementing the Google Maps API to show the filtered businesses on the map on the business index page. This required setting up the markers for the map as well as setting up the info boxes to display each individual business image, name, and address.
+  
+ As I get closer to the end of my project, there are a few aspects I will continue working on. I want to create user profiles to allow more user interactivity. The user profiles should feature all the user's reviews, their photo, and the ability to receive compliments. I'd also like to add the aggregation aspect to reviews, that update the rating for a business based on the average of all the user reviews. The reviews should also be limited to one per business per user. I would also like to add some features to the map, including bounds, an index to correspond businesses with markers, and add more detail to the info box which opens when the map marker is clicked.
 
 I would like to thank App Academy for their amazing TA's and their curriculum, both of which I used for reference during this project.
