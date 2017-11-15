@@ -68,12 +68,12 @@ font-family:'Noto Sans', sans-serif;
 
 #show-detailed-info-wrapper{
   position: absolute;
-  top: 200px;
+  top: 20%;
   margin-top: 20px;
   background-color: white;
   height: 680px;
   width: 350px;
-  right: 20px;
+  right: 1%;
   position: absolute;
   text-align: left;
   border: 1px solid gray;
@@ -81,7 +81,7 @@ font-family:'Noto Sans', sans-serif;
 
 #show-name-wrapper {
   position: absolute;
-  margin-left: 300px;
+  left: 300px;
   width: 800px;
   background: red;
 }
@@ -147,8 +147,8 @@ font-family:'Noto Sans', sans-serif;
   color: white;
   font-weight: bolder;
   position: absolute;
-  top: 30px;
-  right: 600px;
+  top: 10%;
+  right: 5%;
 }
 
 #edit-review-link {

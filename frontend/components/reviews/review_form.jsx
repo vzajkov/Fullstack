@@ -47,28 +47,39 @@ class ReviewForm extends React.Component {
 
     return(
       <form className="review-form" onSubmit={this.props.currentUser.id === this.props.review.author_id ? this.handleEdit : this.handleSubmit}>
-        <input id="review-body-input" type="text" onChange={this.update('body')} placeholder="Write your review!"/>
+        <textarea id="review-body-input" onChange={this.update('body')} placeholder="Write your review!"/>
         <div id="review-rating-radio">
           <p id="rating-indicator">Rating: </p>
-          <label>1
-          <input id="rating-radio" type="radio" name="rating" value="1" onChange={this.update('rating')} />
+
+          <input id="rating-radio-1" type="radio" name="rating" value="1" onChange={this.update('rating')} />
+
+          <label htmlFor="rating-radio-1">
+            <div className={["rating-star-box","one","two", "three", "four", "five"].join(" ")}><i className="fa fa-star" aria-hidden="true"></i></div>
           </label>
 
-          <label>2
-          <input id="rating-radio" type="radio" name="rating" value="2" onChange={this.update('rating')} />
+          <input id="rating-radio-2" type="radio" name="rating" value="2" onChange={this.update('rating')} />
+
+          <label  htmlFor="rating-radio-2">
+            <div className={["rating-star-box","two", "three", "four", "five"].join(" ")}><i className="fa fa-star" aria-hidden="true"></i></div>
           </label>
 
-          <label>3
-          <input id="rating-radio" type="radio" name="rating" value="3" onChange={this.update('rating')} />
+          <input id="rating-radio-3" type="radio" name="rating" value="3" onChange={this.update('rating')} />
+          <label  htmlFor="rating-radio-3">
+            <div className={["rating-star-box","three", "four", "five"].join(" ")}><i className="fa fa-star" aria-hidden="true"></i></div>
           </label>
 
-          <label>4
-          <input id="rating-radio" type="radio" name="rating" value="4" onChange={this.update('rating')} />
+          <input id="rating-radio-4" type="radio" name="rating" value="4" onChange={this.update('rating')} />
+
+          <label  htmlFor="rating-radio-4">
+            <div className={["rating-star-box","four", "five"].join(" ")}><i className="fa fa-star" aria-hidden="true"></i></div>
           </label>
 
-          <label>5
-          <input id="rating-radio" type="radio" name="rating" value="5" onChange={this.update('rating')} />
+          <input id="rating-radio-5" type="radio" name="rating" value="5" onChange={this.update('rating')} />
+
+          <label  htmlFor="rating-radio-5">
+            <div className={["rating-star-box","five"].join(" ")}><i className="fa fa-star" aria-hidden="true"></i></div>
           </label>
+
         </div>
         <input id="submit-review" type="submit" value="Submit Review!"/>
       </form>
