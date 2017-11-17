@@ -1,5 +1,5 @@
 # README
-Welcome to Kelp!
+Welcome to [Kelp](http://www.thekelpapp.com/#/)!
 
 This is a single page web app inspired by Yelp for users to create, read, update, and delete reviews. 
 The technologies used are primarily Ruby on Rails for the back-end and React.js/Redux for the front-end.
