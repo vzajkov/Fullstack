@@ -10,6 +10,7 @@
       @businesses = @businesses.search_for(params[:name])
     end
     #End of template reference
+
     if params[:takeout] == "true"
       @businesses = @businesses.where(:detailed_infos => {:takeout => params[:takeout]}).includes(:detailed_info, :address, :reviews)
     end
@@ -41,6 +42,5 @@
   def show
     @business = Business.find_by(id: params[:id])
   end
-
 
 end
