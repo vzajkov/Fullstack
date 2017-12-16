@@ -7,11 +7,15 @@ import Map from '../map/map.jsx';
 const Search = (props) => {
   return (
     <div>
-      <SearchForm props={props}/>
+      <SearchForm
+        updateFiltering={props.updateFiltering}
+        logout={props.logout}/>
       <div id="index-map-wrapper">
-        <BusinessIndex props={props}/>
+        <BusinessIndex
+          fetchBusinesses={props.fetchBusinesses}
+          businesses={props.businesses}/>
         <div id="map-wrapper">
-          <Map props={props} />
+          <Map businesses={props.businesses}/>
         </div>
       </div>
 

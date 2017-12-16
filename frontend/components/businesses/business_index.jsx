@@ -7,7 +7,7 @@ class BusinessIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.props.fetchBusinesses();
+    this.props.fetchBusinesses();
   }
 
   render() {
@@ -17,7 +17,7 @@ class BusinessIndex extends React.Component {
     <div>
 
       <ul className="business-index-list">
-      {this.props.props.businesses.map(business => (
+      {this.props.businesses.map(business => (
         <li className="business-index-listitem" key={business.id}>
         <BusinessIndexItem business={business}
           key={business.id} />

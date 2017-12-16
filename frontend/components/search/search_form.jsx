@@ -19,12 +19,12 @@ class SearchForm extends React.Component {
   update(filter) {
     return e => {
       if (filter === 'name') {
-        return this.props.props.updateFiltering(filter, e.currentTarget.value);
+        return this.props.updateFiltering(filter, e.currentTarget.value);
       } else {
         if (e.currentTarget.checked) {
-            return this.props.props.updateFiltering(filter, true);
+            return this.props.updateFiltering(filter, true);
         } else {
-           return this.props.props.updateFiltering(filter, false);
+           return this.props.updateFiltering(filter, false);
         }
     }
   };
@@ -76,7 +76,7 @@ class SearchForm extends React.Component {
 
         <nav className="navbar">
           <p id="nav-kelp-logo">Kelp</p>
-          <button id="log-out-button" onClick={this.props.props.logout} >Log Out</button>
+          <button id="log-out-button" onClick={this.props.logout} >Log Out</button>
           <form onSubmit={this.handleSubmit}>
             <div id="submit-searchbar-wrapper">
               <input id="find-submit" type="submit" value="Find"/>
