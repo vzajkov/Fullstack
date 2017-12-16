@@ -78,4 +78,4 @@ detailedinfo11 = DetailedInfo.create!({ business_id: business11.id, wifi: false,
    sunday_hours: "9:00AM to 5:00PM", monday_hours: "8:00AM to 6:00PM", tuesday_hours: "8:00AM to 6:00PM", wednesday_hours: "8:00AM to 6:00PM",
    thursday_hours: "7:00AM to 5:00PM", friday_hours: "9:00AM to 5:00PM", saturday_hours: "8:00AM to 5:00PM"})
 
-review1 = Review.create!({ business_id: business1.id, rating: 4 , author_id: 1, body: "I love this place!"})
+review1 = Review.create!({ business_id: business1.id, rating: 4 ,username: users[1].username, author_id: 1, body: "I love this place!"})

@@ -8,6 +8,7 @@ class ReviewForm extends React.Component {
       body: "fake review",
       business_id: this.props.currentBusiness.id,
       author_id: this.props.currentUser.id,
+      username: this.props.currentUser.username,
       oneStar: false,
       twoStar: false,
       threeStar: false,
@@ -90,6 +91,7 @@ class ReviewForm extends React.Component {
         body: this.state.body,
         business_id: this.props.currentBusiness.id,
         author_id: this.props.currentUser.id,
+        username: this.props.currentUser.username,
         id: this.props.review_id
       }
     });
@@ -99,8 +101,14 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
 
     e.preventDefault();
-    const review = this.state;
-    this.props.createReview({review});
+    this.props.createReview({review: {
+        rating: this.state.rating,
+        body: this.state.body,
+        business_id: this.props.currentBusiness.id,
+        author_id: this.props.currentUser.id,
+        username: this.props.currentUser.username
+      }
+    });
     this.props.history.push(`/businesses/`);
   }
 

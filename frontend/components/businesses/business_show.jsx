@@ -11,7 +11,7 @@ class BusinessShow extends React.Component {
   //componentDidMount
 
   handleRating() {
-    
+
     const rating = Math.floor(this.props.businesses[this.props.match.params.id].rating);
     if (rating === 1 ) {
       return (
@@ -35,7 +35,7 @@ class BusinessShow extends React.Component {
       </div>
     );
     } else if (rating === 4) {
-      
+
       return (
       <div className="star-wrapper">
         <div id="review-star"><i class="fa fa-star" aria-hidden="true"></i></div>
@@ -68,7 +68,7 @@ class BusinessShow extends React.Component {
     const history = this.props.history;
     const deleteReview = this.props.deleteReview;
 
-    
+
     return (
       <div>
         <div id="show-top-wrapper">
@@ -125,7 +125,12 @@ class BusinessShow extends React.Component {
           <ul className="reviews-list">
             {showprops.reviews.map((review) => (
               <li id="review-index-item" review-list-item>
-                 <ReviewIndexItem review={review} history={history} deleteReview={deleteReview} currentUser={currentUser} currentBusiness={showprops}  />
+                 <ReviewIndexItem
+                   review={review}
+                   history={history}
+                   deleteReview={deleteReview}
+                   currentUser={currentUser}
+                   currentBusiness={showprops} />
               </li>
             ))}
           </ul>
