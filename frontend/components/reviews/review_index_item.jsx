@@ -13,7 +13,10 @@ class ReviewIndexItem extends React.Component {
 
       return (
       <div>
-        <Link id="edit-review-link" to={{pathname: "/reviews/" + this.props.review.id + "/edit", state: {currentBusiness: this.props.currentBusiness, review: this.props.review} }}>Edit your Review!</Link>
+        <Link id="edit-review-link"
+          to={{pathname: "/reviews/" + this.props.review.id + "/edit",
+             state: {currentBusiness: this.props.currentBusiness,
+               review: this.props.review} }}>Edit your Review!</Link>
         <button id="delete-review-button" onClick={this.handleClick}> Delete Review </button>
       </div>
     );
@@ -80,7 +83,7 @@ class ReviewIndexItem extends React.Component {
       <div id="review-item-wrapper">
         {this.toggleLink()}
         <div id="review-info-wrapper">
-          <p>{this.handleRating()}</p>
+          <div>{this.handleRating()}</div>
           <p>{this.props.review.username} says: </p>
           <p style={styling}>{this.props.review.body}</p>
         </div>

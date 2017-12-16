@@ -124,7 +124,7 @@ class BusinessShow extends React.Component {
         <div id="show-reviews">
           <ul className="reviews-list">
             {showprops.reviews.map((review) => (
-              <li id="review-index-item" review-list-item>
+              <li id="review-index-item" >
                  <ReviewIndexItem
                    review={review}
                    history={history}

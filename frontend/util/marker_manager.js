@@ -6,7 +6,6 @@ class MarkerManager {
   }
 
   updateMarkers(businesses) {
-    console.log("time to update");
     const businessObj = {};
     businesses.forEach((business) => (businessObj[business.id] = business));
     businesses.forEach((business) => {
