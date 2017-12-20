@@ -11,6 +11,7 @@
     end
     #End of template reference
 
+
     if params[:takeout] == "true"
       @businesses = @businesses.where(:detailed_infos => {:takeout => params[:takeout]}).includes(:detailed_info, :address, :reviews)
     end
