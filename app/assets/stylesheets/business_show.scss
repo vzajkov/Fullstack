@@ -1,15 +1,32 @@
+.business-page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 #show-name {
   font-family: 'Noto Sans', sans-serif;
   font-size: 75px;
   font-weight: bolder;
-  position: absolute;
+}
+
+@media screen and (max-width: 1200px) {
+  #show-top-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  #detailed-info-reviews-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 #show-rating {
-  position: absolute;
   font-weight: bolder;
-  top: 120px;
-  left: 350px;
   font-family: 'Noto Sans', sans-serif;
   width: 300px;
   height: 80px;
@@ -19,7 +36,6 @@
   display: flex;
   width: 280px;
   height: 60px;
-  position: absolute;
 }
 
 #review-star {
@@ -58,45 +74,45 @@ font-family:'Noto Sans', sans-serif;
 }
 
 #show-top-wrapper {
-  height: 500px;
+  display: flex;
   width: 100%;
   border-bottom: 1px solid gray;
   background: #e0e0e0;
-  position: absolute;
+  padding-top: 25px;
+  justify-content: space-around;
 }
 
+#detailed-info-reviews-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 125px;
+  padding-top: 20px;
+}
 
 #show-detailed-info-wrapper{
-  position: absolute;
-  top: 20%;
-  margin-top: 20px;
   background-color: white;
   height: 680px;
   width: 350px;
-  right: 1%;
-  position: absolute;
   text-align: left;
   border: 1px solid gray;
+  padding-left: 5px;
 }
 
 #show-name-wrapper {
-  position: absolute;
-  left: 300px;
-  width: 800px;
-  background: red;
+  color: black;
 }
+
 #business-img-wrapper {
   height: 500px;
   width: 500px;
-  position: absolute;
-  left: 800px;
-  top: 100px;
+}
+
+#name-rating-address-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 #business-item-address-wrapper {
-  position: absolute;
-  left: 300px;
-  top: 200px;
   font-size: 30px;
   font-family: 'Noto Sans', sans-serif;
   padding: 20px;
@@ -104,9 +120,6 @@ font-family:'Noto Sans', sans-serif;
 }
 
 #inner-detailed-info-wrapper {
-  position: absolute;
-  top: 20px;
-  left: 40px;
   font-size: 20px;
   font-family: 'Noto Sans', sans-serif;
 }
@@ -121,11 +134,11 @@ font-family:'Noto Sans', sans-serif;
 
 
 #show-reviews {
-  position: absolute;
+  position: relative;
   font-family: 'Noto Sans', sans-serif;
-  top: 550px;
-  left: 100px;
-  width: 1150px;
+  flex-grow: 2;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #show-reviews:last-of-type {
@@ -146,9 +159,8 @@ font-family:'Noto Sans', sans-serif;
   background-color: #ed0008;
   color: white;
   font-weight: bolder;
-  position: absolute;
-  top: 10%;
-  right: 5%;
+  height: 40px;
+  text-align: center;
 }
 
 #edit-review-link {
@@ -163,6 +175,7 @@ font-family:'Noto Sans', sans-serif;
   font-weight: bolder;
   height: 25px;
   color: white;
+  margin-right: 5px;
 }
 
 #delete-review-button {
@@ -170,10 +183,15 @@ font-family:'Noto Sans', sans-serif;
   border-radius: 2px;
   height: 25px;
   width: 150px;
-  margin-left: 700px;
   text-align: center;
   padding: 3px;
   font-weight: bolder;
+}
+
+#edit-delete-review-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 #review-item-wrapper {

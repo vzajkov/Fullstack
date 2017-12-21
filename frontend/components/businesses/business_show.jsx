@@ -70,25 +70,43 @@ class BusinessShow extends React.Component {
 
 
     return (
-      <div>
+      <div id="business-page-wrapper">
         <div id="show-top-wrapper">
-          <div id="show-name-wrapper">
-            <h2 id="show-name">{showprops.name}</h2>
+
+          <div id="name-rating-address-wrapper">
+            <div id="show-name-wrapper">
+              <h2 id="show-name">{showprops.name}</h2>
+            </div>
+            <div id="show-rating">{this.handleRating()}</div>
+            <div id="business-item-address-wrapper">
+              <p>Address: </p>
+              <p id="show-address">{showprops.address.street}</p>
+              <p id="show-address">{showprops.address.town}, {showprops.address.state}, {showprops.address.country}</p>
+            </div>
           </div>
-          <br/>
-          <div id="business-item-address-wrapper">
-            <p>Address: </p>
-            <p id="show-address">{showprops.address.street}</p>
-            <p id="show-address">{showprops.address.town}, {showprops.address.state}, {showprops.address.country}</p>
+
+          <div id="business-img-wrapper">
+            <img src={"" + showprops.img_url}></img>
           </div>
-          <br/>
+
+          <Link id="link-to-create-review" to={{pathname: "/reviews/new", state: {id: this.props.match.params.id} }} >Write a review!</Link>
         </div>
 
-        <div id="show-rating">{this.handleRating()}</div>
-
-        <div id="business-img-wrapper">
-          <img src={"" + showprops.img_url}></img>
-        </div>
+        <div id="detailed-info-reviews-wrapper">
+          <div id="show-reviews">
+            <ul className="reviews-list">
+              {showprops.reviews.map((review) => (
+                <li id="review-index-item" >
+                   <ReviewIndexItem
+                     review={review}
+                     history={history}
+                     deleteReview={deleteReview}
+                     currentUser={currentUser}
+                     currentBusiness={showprops} />
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div id="show-detailed-info-wrapper">
             <div id="inner-detailed-info-wrapper">
@@ -118,22 +136,6 @@ class BusinessShow extends React.Component {
             </div>
           </div>
 
-
-        <Link id="link-to-create-review" to={{pathname: "/reviews/new", state: {id: this.props.match.params.id} }} >Write a review!</Link>
-
-        <div id="show-reviews">
-          <ul className="reviews-list">
-            {showprops.reviews.map((review) => (
-              <li id="review-index-item" >
-                 <ReviewIndexItem
-                   review={review}
-                   history={history}
-                   deleteReview={deleteReview}
-                   currentUser={currentUser}
-                   currentBusiness={showprops} />
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ class ReviewIndexItem extends React.Component {
     if (this.props.review.author_id === this.props.currentUser.id) {
 
       return (
-      <div>
+      <div id="edit-delete-review-wrapper">
         <Link id="edit-review-link"
           to={{pathname: "/reviews/" + this.props.review.id + "/edit",
              state: {currentBusiness: this.props.currentBusiness,
@@ -81,9 +81,9 @@ class ReviewIndexItem extends React.Component {
 
     return (
       <div id="review-item-wrapper">
-        {this.toggleLink()}
+        <div>{this.toggleLink()}</div>
+        <div>{this.handleRating()}</div>
         <div id="review-info-wrapper">
-          <div>{this.handleRating()}</div>
           <p>{this.props.review.username} says: </p>
           <p style={styling}>{this.props.review.body}</p>
         </div>
