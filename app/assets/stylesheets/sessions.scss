@@ -16,6 +16,36 @@ display: flex;
   margin-right: 0;
 }
 
+.newToKelpLink {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: 'Noto Sans', sans-serif;
+  position: relative;
+  left: 15px;
+  margin: 20px 0px 20px 0px;
+  display: inline-block;
+}
+
+.haveKelpLink {
+  font-size: 30px;
+  font-weight: bolder;
+  position: relative;
+  font-family: 'Noto Sans', sans-serif;
+  left: 15px;
+  margin:20px 0px 20px 0px;
+  display: inline-block;
+}
+
+.welcome {
+  margin: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: red;
+  font-family: 'Noto Sans', sans-serif;
+  display: inline-block;
+}
+
+
 @media screen and (max-width: 1200px) {
   .login-form-container {
     flex-direction: column;
@@ -33,6 +63,15 @@ display: flex;
     width: 90vw;
     height: 300px;
     margin-bottom: 100px;
+  }
+
+  .welcome, .newToKelpLink, .haveKelpLink {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  .welcome {
+    margin-left: 70px;
   }
 }
 
@@ -85,35 +124,6 @@ font-family: 'Noto Sans', sans-serif;
 display: inline-block;
 position: relative;
 margin: 0 auto;
-}
-
-.welcome {
-  margin: 10px;
-  font-size: 40px;
-  font-weight: bolder;
-  color: red;
-  font-family: 'Noto Sans', sans-serif;
-  display: inline-block;
-}
-
-.newToKelpLink {
-  font-size: 30px;
-  font-weight: bolder;
-  font-family: 'Noto Sans', sans-serif;
-  position: relative;
-  left: 15px;
-  margin: 20px 0px 20px 0px;
-  display: inline-block;
-}
-
-.haveKelpLink {
-  font-size: 30px;
-  font-weight: bolder;
-  position: relative;
-  font-family: 'Noto Sans', sans-serif;
-  left: 15px;
-  margin:20px 0px 20px 0px;
-  display: inline-block;
 }
 
 .header {
