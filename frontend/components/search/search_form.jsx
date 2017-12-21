@@ -72,26 +72,26 @@ class SearchForm extends React.Component {
   render() {
 
     return (
-      <div>
-
+      <div id="nav-bar-wrapper">
         <nav className="navbar">
-          <p id="nav-kelp-logo">Kelp</p>
-          <button id="log-out-button" onClick={this.props.logout} >Log Out</button>
+
+        <div id="logout-search-logo-wrapper">
+          <div id="nav-kelp-logo">Kelp</div>
           <form onSubmit={this.handleSubmit}>
             <div id="submit-searchbar-wrapper">
-              <input id="find-submit" type="submit" value="Find"/>
               <input
                 id="search-bar"
                 type="text"
-                placeholder="restuarants,cafes, diners"
+                placeholder="Search for businesses"
                 onChange={this.update('name')}/>
             </div>
           </form>
-
+          <button id="log-out-button" onClick={this.props.logout} >Log Out</button>
+        </div>
 
         <nav className="filter-nav">
-          <form className="filter-bar">
-            <div className="preferencesFilter">
+          <div className="filter-bar">
+
               <label htmlFor="smoking" onClick={this.toggleSmoking.bind(this)} className={this.state.smokingStatus ? 'toggled-on' : 'toggled-off'}>
               Smoking</label>
               <input id="smoking" type="checkbox" name="Smoking?" value="true" onChange={this.update('smoking')}/>
@@ -108,9 +108,9 @@ class SearchForm extends React.Component {
             <label htmlFor="takeout" onClick={this.toggleTakeout.bind(this)} className={this.state.takeoutStatus ? 'toggled-on' : 'toggled-off'}>
               Takeout</label>
             <input id="takeout" type="checkbox" name="Takeout?" value="true" onChange={this.update('takeout')}/>
-            </div>
 
-            <div className = "priceFilter">
+
+
               <label htmlFor="d" onClick={this.toggle$.bind(this)} className={this.state.$Status ? 'toggled-on' : 'toggled-off'}>
               $</label>
             <input id="d" type="checkbox" name="$" value='$' onChange={this.update('d')}/>
@@ -126,8 +126,8 @@ class SearchForm extends React.Component {
               <label htmlFor="dddd" onClick={this.toggle$$$$.bind(this)} className={this.state.$$$$Status ? 'toggled-on' : 'toggled-off'} >
               $$$$</label>
             <input id="dddd" type="checkbox" name="$$$$" value='$$$$' onChange={this.update('dddd')}/>
-            </div>
-          </form>
+
+          </div>
         </nav>
       </nav>
 

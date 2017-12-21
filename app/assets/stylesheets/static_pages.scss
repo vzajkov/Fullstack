@@ -3,32 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#welcome-img {
-  width: 600px;
-  height: 500px;
-  display: inline;
-  position: relative;
-  margin-right: 0;
-}
-
 .landing-background {
   background-image: url("https://goo.gl/JzKBj1");
-  text-align: center;
   background-size: cover;
-}
-
-#log-out-button {
-  font-family: 'Noto Sans', sans-serif;
-  height: 35px;
-  width: 100px;
-  color: white;
-  background-color: #bd1f1f;
-  border-radius: 5px;
-  font-weight: bolder;
+  height: 100vh;
+  width: 100vw;
   text-align: center;
-  position: absolute;
-  right: 120px;
-  top: 10px;
 }
 
 #landing-yelp-icon {

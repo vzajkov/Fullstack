@@ -116,11 +116,8 @@ class ReviewForm extends React.Component {
 
     return(
       <form className="review-form" onSubmit={this.props.currentUser.id === this.props.review.author_id ? this.handleEdit : this.handleSubmit}>
-        <textarea id="review-body-input" onChange={this.update('body')} placeholder="Write your review!"/>
+
         <div id="review-rating-radio">
-          <p id="rating-indicator">Rating: </p>
-
-
 
           <label className="label-one" htmlFor="rating-radio-1">
             <div onClick={this.toggleOne} className={this.state.oneStar ? 'rated' : 'rating-star-box'}><i className="fa fa-star" aria-hidden="true"></i></div>
@@ -149,6 +146,7 @@ class ReviewForm extends React.Component {
           <input id="rating-radio-5" type="radio" name="rating" value="5" onChange={this.update('rating')} />
 
         </div>
+          <textarea id="review-body-input" onChange={this.update('body')} placeholder="Write your review!"/>
         <input id="submit-review" type="submit" value="Submit Review!"/>
       </form>
     );

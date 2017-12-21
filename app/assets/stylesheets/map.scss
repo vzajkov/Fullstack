@@ -2,19 +2,27 @@
   width: 600px;
   height: 600px;
   border: 1px solid #D3D3D3;
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 100px;
 }
 
 #index-map-wrapper {
   display: flex;
-}
-
-#map-wrapper {
+  padding-top: 20px;
+  justify-content: space-around;
 }
 
 #info-window-img {
   height: 100px;
   width: 130px;
+}
+
+@media screen and (max-width: 500px)  {
+  #index-map-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #map {
+    width: 90vw;
+    height: 400px;
+  }
 }

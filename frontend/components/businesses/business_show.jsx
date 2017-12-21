@@ -81,7 +81,7 @@ class BusinessShow extends React.Component {
             <div id="business-item-address-wrapper">
               <p>Address: </p>
               <p id="show-address">{showprops.address.street}</p>
-              <p id="show-address">{showprops.address.town}, {showprops.address.state}, {showprops.address.country}</p>
+              <p id="show-address">{showprops.address.town}, {showprops.address.state}</p>
             </div>
           </div>
 

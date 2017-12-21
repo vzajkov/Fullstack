@@ -1,32 +1,14 @@
 .filter-nav {
   background-color: #D3D3D3;
   border-bottom: 1px solid gray;
-  height: 55px;
+  padding-bottom: 10px;
 }
 
 .filter-bar {
   display: flex;
-  width: 600px;
-  margin: 0 auto;
+  justify-content: center;
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
-  position: relative;
-  margin-left: 250px;
-}
-
-
-.preferencesFilter {
-  display: flex;
-  position: relative;
-  margin-right: 100px;
-  width: 800px;
-}
-
-
-.priceFilter {
-  display: flex;
-  position: relative;
-  margin-left: 100px;
 }
 
 .toggled-on {
@@ -55,6 +37,27 @@
   background-color: white;
 }
 
+@media screen and (max-width: 500px) {
+  .filter-bar {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggled-on {
+    margin-right: 0px;
+    width: 200px;
+    height: 30px;
+  }
+
+  .toggled-off {
+    margin-right: 0px;
+    width: 200px;
+    height: 30px;
+  }
+}
+
 .toggled-off:hover {
   box-shadow: 0px 0.5px 0.5px black;
 }
@@ -67,21 +70,4 @@
 #smoking, #parking, #takeout, #wifi,
 #d, #dd, #ddd, #dddd {
   display: none;
-}
-
-#nav-kelp-logo {
-  font-size: 35px;
-  font-family: sans-serif;
-  color: black;
-  font-weight: bolder;
-  text-shadow: -3px -3px 3px white,
-  0px -3px 3px white,
-  3px -3px 3px white,
-  -2px 3px 3px white,
-  3px 0px 3px white,
-  -3px 3px 3px white,
-  -2px -3px 3px white
-  ;
-  position: absolute;
-  left: 100px;
 }

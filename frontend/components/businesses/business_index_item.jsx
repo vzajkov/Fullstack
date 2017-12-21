@@ -71,7 +71,7 @@ class BusinessIndexItem extends React.Component{
           <span className="address">
           {this.props.business.address.street}, {this.props.business.address.town}
           <br/>
-          {this.props.business.address.state}, {this.props.business.address.country}
+          {this.props.business.address.state}
           <br/>
           </span>
         </span>

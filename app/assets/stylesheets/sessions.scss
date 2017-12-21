@@ -8,6 +8,34 @@ justify-content: space-around;
 display: flex;
 }
 
+#welcome-img {
+  width: 600px;
+  height: 500px;
+  display: inline;
+  position: relative;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .login-form-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  #welcome-img {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #welcome-img {
+    width: 90vw;
+    height: 300px;
+    margin-bottom: 100px;
+  }
+}
+
 .creds-input-wrapper {
   text-align: center;
 }
@@ -25,7 +53,6 @@ font-family: 'Noto Sans', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
 }
 
 #Kelp-title {
@@ -102,7 +129,7 @@ margin: 0 auto;
   border-top: 1px solid gray;
   background-color: #D3D3D3;
   height: 50px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   bottom: 0px;
   font-weight: bolder;

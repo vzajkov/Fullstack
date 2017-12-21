@@ -2,26 +2,64 @@
   background-color: white;
   display: inline;
   width: 1000px;
-  height: 35px;
+  height: 40px;
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
   position: relative;
 }
 
-#find-submit {
-  background: white;
-  font-weight: 20px;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
-  height: 32px;
-  padding-top: 2px;
-  padding-bottom: 1px;
-  padding-right: 3px;
-  border-radius: 3px 0px 0px 3px;
+#submit-searchbar-wrapper {
+  margin-bottom: 30px;
 }
 
-#submit-searchbar-wrapper {
-  margin-left: 300px;
-  margin-bottom: 30px;
+#logout-search-logo-wrapper {
+  display: flex;
+  background: red;
+  padding-top: 10px;
+  justify-content: space-around;
+}
+#nav-kelp-logo {
+  font-size: 35px;
+  font-family: sans-serif;
+  color: black;
+  font-weight: bolder;
+  text-shadow: -3px -3px 3px white,
+  0px -3px 3px white,
+  3px -3px 3px white,
+  -2px 3px 3px white,
+  3px 0px 3px white,
+  -3px 3px 3px white,
+  -2px -3px 3px white
+  ;
+}
+#log-out-button {
+  font-family: 'Noto Sans', sans-serif;
+  height: 35px;
+  width: 100px;
+  color: white;
+  background-color: #bd1f1f;
+  border-radius: 5px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  #search-bar {
+    width: 80vw;
+  }
+  #logout-search-logo-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #log-out-button {
+    margin-bottom: 5px;
+  }
+
+  #nav-kelp-logo {
+    margin-bottom: 10px;
+  }
 }

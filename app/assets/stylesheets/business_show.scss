@@ -9,11 +9,25 @@
   font-weight: bolder;
 }
 
+#show-top-wrapper {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background: #e0e0e0;
+  padding-top: 25px;
+  justify-content: space-around;
+}
+
+#business-img-wrapper {
+  height: 500px;
+  width: 500px;
+}
+
 @media screen and (max-width: 1200px) {
   #show-top-wrapper {
     flex-direction: column;
-    justify-content: center;
     padding-bottom: 20px;
+    width: 100vw;
   }
 
 }
@@ -23,6 +37,13 @@
     flex-direction: column-reverse;
     align-items: center;
   }
+
+  #business-img-wrapper {
+    width: 300px;
+    padding-left: 20px;
+    height: 300px;
+  }
+
 }
 
 #show-rating {
@@ -73,15 +94,6 @@ font-family:'Noto Sans', sans-serif;
 font-family:'Noto Sans', sans-serif;
 }
 
-#show-top-wrapper {
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid gray;
-  background: #e0e0e0;
-  padding-top: 25px;
-  justify-content: space-around;
-}
-
 #detailed-info-reviews-wrapper {
   display: flex;
   justify-content: space-around;
@@ -100,11 +112,6 @@ font-family:'Noto Sans', sans-serif;
 
 #show-name-wrapper {
   color: black;
-}
-
-#business-img-wrapper {
-  height: 500px;
-  width: 500px;
 }
 
 #name-rating-address-wrapper {
@@ -136,7 +143,7 @@ font-family:'Noto Sans', sans-serif;
 #show-reviews {
   position: relative;
   font-family: 'Noto Sans', sans-serif;
-  flex-grow: 2;
+  flex-grow: 1;
   padding-left: 20px;
   padding-right: 20px;
 }

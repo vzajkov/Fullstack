@@ -14,7 +14,7 @@ const Landing = () => (
        <i id="landing-yelp-icon"class="fa fa-yelp" aria-hidden="true"></i>
     </span>
 
-
+    
   </div>
 );
 

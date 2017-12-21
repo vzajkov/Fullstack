@@ -2,25 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.review-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+}
 
 #review-rating-radio {
-  position: absolute;
-  border: 1px solid black;
   width: 800px;
-  top: 50px;
-  left: 30%;
+  text-align: center;
   display: inline;
   margin-bottom: 20px;
   padding: 10px;
 }
 
 #review-body-input {
-  position: absolute;
   height: 400px;
   width: 820px;
   border: 1px solid black;
-  top: 160px;
-  left: 30%;
   font-size: 30px;
   font-family: 'Noto Sans', sans-serif;
   padding: 10px;
@@ -83,15 +84,23 @@
   background-color: #ed0008;
   font-family: 'Noto Sans', sans-serif;
   font-weight: bolder;
-  position: absolute;
-  left: 30%;
-  top: 630px;
   padding: 10px;
   padding-left: 15px;
+  margin-top: 15px;
 }
 
 #rating-indicator {
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 500px) {
+  #review-rating-radio {
+    width: 94vw;
+  }
+
+  #review-body-input {
+    width: 90vw;
+  }
 }
