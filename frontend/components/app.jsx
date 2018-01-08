@@ -23,7 +23,7 @@ const App = () => (
       <div className="footer">
         <div className="footerLinks">
           <a href="https://github.com/vzajkov">Github</a>
-          <a href="https://www.facebook.com/valery.zajkov">Facebook</a>
+          <a href="https://angel.co/valery-zajkov?public_profile=1">AngelList</a>
           <a href="https://www.linkedin.com/in/valeryzajkov/">LinkedIn</a>
         </div>
       </div>
